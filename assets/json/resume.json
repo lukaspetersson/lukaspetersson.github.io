@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Lukas Petersson",
-    "label": "Engineering Physics and Mathematics Student",
+    "label": "Founder and CTO of Vectorview",
     "image": "",
     "email": "",
     "phone": "",
     "url": "",
-    "summary": "Experienced in AI safety, robotics, and software engineering with a strong academic background in Engineering Physics and Mathematics.",
+    "summary": "",
     "location": {
       "address": "",
       "postalCode": "",
@@ -19,11 +19,10 @@
   "work": [
     {
       "name": "Vectorview (YC w24)",
-      "position": "CTO and Co-founder",
+      "position": "Founder and CTO",
       "url": "",
       "startDate": "2023-12",
       "endDate": "Present",
-      "summary": "Built AI safety evals for Anthropic and other big AI labs",
       "highlights": [
         "Built AI safety evals for Anthropic and other big AI labs",
         "Raised $2.2M at 15M cap",
@@ -36,7 +35,6 @@
       "url": "",
       "startDate": "2023-05",
       "endDate": "2023-12",
-      "summary": "Researched how to best combine modalities in transformer models",
       "highlights": [
         "Researched how to best combine modalities in transformer models",
         "Authored a thesis paper"
@@ -48,7 +46,6 @@
       "url": "",
       "startDate": "2023-02",
       "endDate": "2023-04",
-      "summary": "Part of the small team that made a viral robot",
       "highlights": [
         "Part of the small team that made this viral robot",
         "Developed an RL algorithm for social robotic interaction",
@@ -61,7 +58,6 @@
       "url": "",
       "startDate": "2022-06",
       "endDate": "2022-09",
-      "summary": "Automated data analysis by training a Decision Forest model",
       "highlights": [
         "Automated data analysis by training a Decision Forest model",
         "Discovered weakness in training data by visualizing it in graphs"
@@ -73,7 +69,6 @@
       "url": "",
       "startDate": "2022-03",
       "endDate": "2022-06",
-      "summary": "Reduced CI time by orders of magnitude by parallelization compute",
       "highlights": [
         "Reduced CI time by orders of magnitude by parallelization compute",
         "Discovered latency bottlenecks by building a timestamping tool"
@@ -85,7 +80,6 @@
       "url": "",
       "startDate": "2021-05",
       "endDate": "2021-09",
-      "summary": "Implemented a semantic validator for a low-level language using modeling tools",
       "highlights": [
         "Implemented a semantic validator for a low-level language using modeling tools",
         "Improved existing technology significantly"
@@ -97,7 +91,6 @@
       "url": "",
       "startDate": "2019-11",
       "endDate": "2021-01",
-      "summary": "Enabled small businesses to digitalize by building full-stack web tools",
       "highlights": [
         "Enabled small businesses to digitalize by building full-stack web tools",
         "Agile approach in dialogue with the customer"
@@ -109,7 +102,6 @@
       "url": "",
       "startDate": "2019-01",
       "endDate": "2019-05",
-      "summary": "Improved internal communication by developing a real-time file-sharing web app",
       "highlights": [
         "Improved internal communication by developing a real-time file-sharing web app",
         "Developed an improved Android phone app with Kotlin"
@@ -121,7 +113,6 @@
       "url": "",
       "startDate": "2018-11",
       "endDate": "2019-07",
-      "summary": "Enhanced robot-human interactions by building user-friendly interfaces",
       "highlights": [
         "Enhanced robot-human interactions by building user-friendly interfaces and implementing facial recognition and speech-to-text libraries"
       ]
@@ -133,8 +124,7 @@
       "position": "Robotics Software Specialist",
       "url": "",
       "startDate": "2022-07",
-      "endDate": "Present",
-      "summary": "Underwater robot to explore the oceans of Jupiter and Saturn's icy moons",
+      "endDate": "2023-05",
       "highlights": [
         "Improved testability of system by implementing a ROS simulator"
       ]
@@ -145,7 +135,6 @@
       "url": "",
       "startDate": "2021-07",
       "endDate": "2022-08",
-      "summary": "Turned Sweden's best Formula Student car autonomous with ML",
       "highlights": [
         "Improved state estimation by building an Extended Kalman Filter library"
       ]
@@ -156,7 +145,6 @@
       "url": "",
       "startDate": "2020-11",
       "endDate": "2021-10",
-      "summary": "Selected as one out of 24 students from all over Europe",
       "highlights": [
         "Acted as principal investigator for the sounding rocket launch campaign"
       ]
@@ -167,7 +155,6 @@
       "url": "",
       "startDate": "2020-06",
       "endDate": "2021-01",
-      "summary": "Designed a low-cost computer room with RaspberryPIs for a school in Tanzania",
       "highlights": []
     },
     {
@@ -176,7 +163,6 @@
       "url": "",
       "startDate": "2019-11",
       "endDate": "2020-06",
-      "summary": "Organized entrepreneurial events for up to hundreds of guests",
       "highlights": [
         "Co-founded startup society"
       ]
@@ -219,66 +205,20 @@
   ],
   "awards": [
     {
-      "title": "3rd place",
+      "title": "NCPC 3rd place",
       "date": "2021",
-      "awarder": "NCPC (Nordic ICPC qualifiers)",
-      "summary": "Finished 3rd of all Swedish teams"
+      "summary": "Nordic competitive programming contest"
     },
     {
-      "title": "5th place",
+      "title": "NCPC 5th place",
       "date": "2020",
-      "awarder": "NCPC",
-      "summary": "Finished 5th in Sweden with only a two man team"
+      "summary": "Nordic competitive programming contest"
     }
   ],
   "certificates": [],
   "publications": [
-    {
-      "name": "Taming the Machine",
-      "publisher": "",
-      "releaseDate": "2023",
-      "url": "",
-      "summary": "Book contribution on AI Safety research"
-    },
-    {
-      "name": "Model-Based Systems Engineering",
-      "publisher": "",
-      "releaseDate": "2021",
-      "url": "",
-      "summary": "Published and presented a paper on Model-Based Systems Engineering Conference"
-    }
   ],
   "skills": [
-    {
-      "name": "AI Safety",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Robotics",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Machine Learning",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Software Engineering",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Data Analysis",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Full-stack Web Development",
-      "level": "",
-      "keywords": []
-    }
   ],
   "languages": [],
   "interests": [],
@@ -287,7 +227,6 @@
     {
       "name": "AcademicGPT",
       "startDate": "2023",
-      "endDate": "",
       "description": "AI-powered tool for academic writing",
       "highlights": [
         "400 daily users",
@@ -298,7 +237,6 @@
     {
       "name": "ChattenChatten",
       "startDate": "2023",
-      "endDate": "",
       "description": "Personal AI tutor for University students",
       "highlights": [],
       "url": ""
@@ -306,7 +244,6 @@
     {
       "name": "KritikAI",
       "startDate": "2023",
-      "endDate": "",
       "description": "SAAS business for AI-powered code reviews",
       "highlights": [],
       "url": ""
@@ -314,7 +251,6 @@
     {
       "name": "CommaAI Challenge",
       "startDate": "2021",
-      "endDate": "",
       "description": "Computer Vision Project",
       "highlights": [
         "Applied CNN and optical flow to achieve a better score than the internal solution"
@@ -324,7 +260,6 @@
     {
       "name": "BookLog and other mobile apps",
       "startDate": "2018",
-      "endDate": "Present",
       "description": "Mobile Development",
       "highlights": [
         "Published 3 public apps on Play Store and built others to sell to businesses"
