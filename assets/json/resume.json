@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Lukas Petersson",
-    "label": "Founder and CTO of Vectorview",
+    "label": "Founder and CEO of Andon Labs",
     "image": "",
     "email": "",
     "phone": "",
@@ -18,8 +18,8 @@
   },
   "work": [
     {
-      "name": "Vectorview (YC w24)",
-      "position": "Founder and CTO",
+      "name": "Andon Labs (YC w24)",
+      "position": "Founder and CEO",
       "url": "",
       "startDate": "2023-12",
       "endDate": "Present",
