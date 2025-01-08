@@ -20,7 +20,7 @@ He points out that throughout AI's history, researchers have repeatedly tried to
 
 From an AI research perspective, the Bitter Lesson deals with clear definitions of "better." In computer chess, it's your win rate; in speech recognition, it's word accuracy. But this post looks at AI `products` in the application layer (see Figure 1), where "better" means both `performance` and `adoption` in the market. We'll cover adoption in Chapter 2\. For now, let's focus on product performance \- the amount of economically valuable work a product can replace. Better performance means handling more complex problems, which unlocks more value.
 
-![/img/stack.png][image1]
+![stack](/assets/img/stack.png)
 
 *Figure 1, illustration of different types of AI products. In this post, we talk about the application layer.*
 
@@ -31,8 +31,7 @@ AI `products` are typically an AI `model` wrapped in some `packaging software`. 
 
 You can pursue both paths, but here's the crucial insight: as models improve, the value of engineering effort diminishes. Right now, there are huge gains to be made in building better packaging software, but only because current models make many mistakes. As models become more reliable, this will change. Eventually, you'll just need to connect a model to a computer to solve most problems \- no complex engineering required.
 
-![perf-vs-effort2](assets/img/perf-vs-effort.png)
-![perf-vs-effort3](/assets/img/perf-vs-effort.png)
+![perf-vs-effort](/assets/img/perf-vs-effort.png)
 
 *Figure 2, illustration of the diminishing returns of engineering effort when building AI products in the application layer. The value diminishes both as more engineering effort is made and as better models are released.*
 
@@ -47,10 +46,10 @@ At its core, this engineering effort aims to constrain AI and reduce its mistake
 
 These two types of constraints create a framework for categorizing AI products:
 
-|  | Vertical | Horizontal |
-| ----- | ----- | ----- |
-| Workflow | Harvey | ChatGPT |
-| Agent | Devin | Claude computer-use |
+| | **Vertical** | **Horizontal** |
+|---|:---:|:---:|
+| **Workflow** | Harvey | ChatGPT |
+| **Agent** | Devin | Claude computer-use |
 
 *Table 1: Classification of famous AI products. Note that ChatGPT likely follows a predefined code path for each message, making it a workflow rather than an agent.*
 
@@ -92,13 +91,13 @@ This maps directly to our discussion of AI products. Vertical workflows and spec
 
 ### **Appendix B: End-to-end vs Feature Engineering**
 
-![][image3]
+![e2e](/assets/img/e2e.png)
 
 *Figure 1: Comparison of traditional machine learning, which requires manual feature engineering, with deep learning's end-to-end approach. The traditional approach needs humans to define what's important in the data, while deep learning figures this out by itself.*
 
 Traditional machine learning requires humans to decide what's important in the data. You take raw input, like an image, and manually extract meaningful patterns or "features" \- like counting specific shapes or measuring certain properties. Deep learning, in contrast, learns these patterns automatically.
 
-![][image4]
+![car-features](/assets/img/car-features.png)
 
 *Figure 2: Self-driving car visualization showing feature extraction in action. The system identifies and tracks specific objects like cars, pedestrians, and lane markings. This represents the traditional approach of breaking down a complex problem into smaller, defined pieces.*
 
@@ -109,7 +108,7 @@ Let's use self-driving cars as an example. You could build it two ways:
 
 The feature engineering approach feels safer and more controlled. That's why it dominated early AI. But as George Hotz observed: "if anything about the history of AI has taught us anything, it's that feature engineering approaches will always be replaced and loose to end-to-end."
 
-![][image5]
+![sholto](/assets/img/sholto.png)
 
 *Figure 3: Tweet from Sholto Douglas*
 
