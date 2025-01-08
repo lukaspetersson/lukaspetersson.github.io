@@ -33,7 +33,7 @@ AI `products` are typically an AI `model` wrapped in some `packaging software`. 
 
 You can pursue both paths, but here's the crucial insight: as models improve, the value of engineering effort diminishes. Right now, there are huge gains to be made in building better packaging software, but only because current models make many mistakes. As models become more reliable, this will change. Eventually, you'll just need to connect a model to a computer to solve most problems \- no complex engineering required.
 
-![alt text](/img/perf-vs-effort.png)
+![perf-vs-effort](./img/perf-vs-effort.png)
 
 *Figure 2, illustration of the diminishing returns of engineering effort when building AI products in the application layer. The value diminishes both as more engineering effort is made and as better models are released.*
 
