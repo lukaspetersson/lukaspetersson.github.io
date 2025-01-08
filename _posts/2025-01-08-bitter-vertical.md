@@ -8,8 +8,6 @@ categories:
 featured: false
 ---
 
-# **Chapter 1: AI founders will learn The Bitter Lesson**
-
 Recent AI progress has enabled new `products` that solve a broad range of `problems`. I saw this firsthand watching over 100 pitches during YC alumni Demo Day. These problems share a common thread \- they're simple enough to be solved with `constrained` AI. Yet the real power of AI lies in its `flexibility`. While `products` with fewer constraints generally work better, current AI `models` aren't reliable enough to build such products at scale. We've been here before with AI, many times. Each time, the winning move has been the same. AI founders need to learn this history, or I fear they'll discover these lessons the hard way.
 
 In 2019, Richard Sutton started his famous essay "The Bitter Lesson" with:
@@ -33,7 +31,7 @@ AI `products` are typically an AI `model` wrapped in some `packaging software`. 
 
 You can pursue both paths, but here's the crucial insight: as models improve, the value of engineering effort diminishes. Right now, there are huge gains to be made in building better packaging software, but only because current models make many mistakes. As models become more reliable, this will change. Eventually, you'll just need to connect a model to a computer to solve most problems \- no complex engineering required.
 
-![perf-vs-effort](./img/perf-vs-effort.png)
+![perf-vs-effort](/assets/img/posts_img/perf-vs-effort.png)
 
 *Figure 2, illustration of the diminishing returns of engineering effort when building AI products in the application layer. The value diminishes both as more engineering effort is made and as better models are released.*
 
