@@ -8,6 +8,12 @@ categories:
 featured: false
 ---
 
+*tl;dr:*
+* Historically, general approaches always win in AI.
+* Founders in AI application space now repeat the mistakes AI researchers made in the past.
+* Better AI models will enable general purpose AI applications. At the same time, the added value of the software around the AI model will diminish.
+
+
 Recent AI progress has enabled new `products` that solve a broad range of `problems`. I saw this firsthand watching over 100 pitches during YC alumni Demo Day. These problems share a common thread \- they're simple enough to be solved with `constrained` AI. Yet the real power of AI lies in its `flexibility`. While `products` with fewer constraints generally work better, current AI `models` aren't reliable enough to build such products at scale. We've been here before with AI, many times. Each time, the winning move has been the same. AI founders need to learn this history, or I fear they'll discover these lessons the hard way.
 
 In 2019, Richard Sutton started his famous essay "The Bitter Lesson" with:
