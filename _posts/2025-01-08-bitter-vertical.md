@@ -6,6 +6,7 @@ description: AI
 tags: AI applications, Startups
 categories: 
 featured: false
+pretty_table: true
 ---
 
 *tl;dr:*
@@ -73,7 +74,7 @@ Almost all products at Demo Day fell into the vertical workflow category. This m
 This pattern should sound familiar. Let's return to the Bitter Lesson. AI researchers repeatedly tried to engineer their way to "acceptable performance," only to be overtaken by more general solutions that simply used more compute. The parallel to how today's AI products are built is striking. And we can make this connection even clearer by examining how the Bitter Lesson applies to our two types of constraints:
 
 | Bitter Lesson Observation | Autonomy | Specificity |
-| ----- | ----- | ----- |
+| :----- | :----- | :----- |
 | 1\) AI researchers have often tried to build knowledge into their agents | The developer experiments with an autonomous agent but finds it unreliable. Instead, they hardcode the execution steps to follow the workflow that they would go through themselves when solving the task. | The developer starts building a general document analysis system but finds it unreliable. Instead, they constrain it to just analyze financial statements, hardcoding specific metrics and validation rules. |
 | 2\) This always helps in the short term and is personally satisfying to the researcher | The developer finds that this increases reliability. | The developer finds that specialization improves accuracy since the model only needs to handle a narrow set of documents and metrics. |
 | 3\) In the long run, it plateaus and even inhibits further progress | The constrained workflow sometimes does not give the correct output when faced with novel situations that weren't considered in the hardcoded steps. | The specialized system can't handle related tasks like analyzing merger documents or earnings calls, requiring separate specialized systems for each type of analysis. |
