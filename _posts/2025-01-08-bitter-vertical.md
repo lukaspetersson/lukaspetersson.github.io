@@ -2,7 +2,7 @@
 layout: post
 title: AI founders will learn The Bitter Lesson 
 date: 2025-01-08
-description: AI
+description: Historically, general approaches always win in AI. Founders in AI application space now repeat the mistakes of AI researchers.
 tags: AI applications, Startups
 categories: 
 featured: false
