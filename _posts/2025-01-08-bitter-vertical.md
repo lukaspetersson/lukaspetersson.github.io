@@ -121,4 +121,6 @@ The feature engineering approach feels safer and more controlled. That's why it 
 
 This connects directly to our discussion of AI products. Building vertical-specific tools is like feature engineering \- you're deciding what information matters ahead of time. When you constrain a model's autonomy, you're doing the same thing. While this might work better today, history suggests betting on end-to-end approaches will win in the long run.
 
+"if anything about the history of AI has taught us anything, it's that feature engineering approaches will always be replaced and lose to end-to-end." - [George Hotz](https://www.youtube.com/watch?v=pGF2xK_Hntw&t=372s)
+
 Follow me on [X](https://x.com/lukaspet) or subscribe via [RSS](https://lukaspetersson.com/feed.xml) to stay updated.
