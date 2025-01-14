@@ -113,14 +113,12 @@ Let's use self-driving cars as an example. You could build it two ways:
 1. Feature engineering: Break down what the car sees into specific pieces \- where are the other cars, where are the lanes, how fast is that pedestrian moving?
 2. End-to-end: Feed raw video directly into a neural network and let it figure out how to drive.
 
-The feature engineering approach feels safer and more controlled. That's why it dominated early AI. But as George Hotz observed: "if anything about the history of AI has taught us anything, it's that feature engineering approaches will always be replaced and loose to end-to-end."
+The feature engineering approach feels safer and more controlled. That's why it dominated early AI. But as George Hotz observed: "if anything about the history of AI has taught us anything, it's that feature engineering approaches will always be replaced and lose to end-to-end."
 
 ![sholto](/assets/img/sholto.png)
 
 *Figure 3: Tweet from Sholto Douglas*
 
 This connects directly to our discussion of AI products. Building vertical-specific tools is like feature engineering \- you're deciding what information matters ahead of time. When you constrain a model's autonomy, you're doing the same thing. While this might work better today, history suggests betting on end-to-end approaches will win in the long run.
-
-"if anything about the history of AI has taught us anything, it's that feature engineering approaches will always be replaced and lose to end-to-end." - [George Hotz](https://www.youtube.com/watch?v=pGF2xK_Hntw&t=372s)
 
 Follow me on [X](https://x.com/lukaspet) or subscribe via [RSS](https://lukaspetersson.com/feed.xml) to stay updated.
