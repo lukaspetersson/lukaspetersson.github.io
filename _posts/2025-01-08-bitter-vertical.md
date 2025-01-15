@@ -7,6 +7,7 @@ tags: AI applications, Startups
 categories: 
 featured: false
 pretty_table: true
+giscus_comments: true
 ---
 
 *tl;dr:*

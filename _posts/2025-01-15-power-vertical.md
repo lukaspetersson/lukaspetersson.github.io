@@ -7,6 +7,7 @@ tags: AI applications, Startups
 categories: 
 featured: false
 pretty_table: true
+giscus_comments: true
 ---
 *tl;dr:*
 * Horizontal AI products will eventually outperform vertical AI products in most verticals. AI verticals were first to market, but who will win in the long run?
@@ -47,16 +48,19 @@ Hamilton Helmer's 7 Powers provides a nice framework for analyzing if they can s
 *Customer retention through perceived losses and barriers associated with changing providers. This makes customers more likely to stay with the current provider even if alternatives exist.*
 
 **Integration/UX**
+
 Users might have grown used to the UI of the vertical AI product, but this is unlikely to be a barrier because of the simple nature of onboarding horizontal AI. It will be like onboarding a new employee, which you have done many times before. Or as Leopold Aschenbrenner [put it](https://situational-awareness.ai/): "The drop-in remote worker will be dramatically easier to integrate—just, well, drop them in to automate all the jobs that could be done remotely."
 
 Furthermore, the remote co-worker will evolve from an existing horizontal AI product which you are already used to. Most people will already be familiar with the UI of ChatGPT. As a last point, horizontal AI products will be able to greatly benefit from being able to seamlessly share context across tasks.
 
 Dialog in natural language seems to be the best UI, as it is the one we have chosen in most of our daily interactions. However, there are some areas where a computer UI is more convenient. Of course, traditional software like Excel still exists and can be used to interact with the horizontal agent in these cases, but I am open to the possibility that there is a niche where neither traditional software nor natural language dialog is optimal. AI verticals that operate in such a niche (and innovate this UI) would find switching cost barriers. However, their moat would not be AI-related; non-AI versions (which the horizontal AI could use) would be equally valuable.
 
-**Sales**
+**Sales** 
+
 Sales will not be a barrier if the horizontal product evolves from a product you already have. Many companies have already gone through procurement of ChatGPT, and this is only increasing.
 
 **Price**
+
 The closest thing we have today to the horizontal AI product we are dealing with is Claude Computer-use, which is very expensive to run because of repeated calls to big LLM models with high resolution images. AI verticals often optimize this by limiting the input to only include what (they think) is relevant. But the cost of running models has been on a steep downward trajectory. Because of competition between the AI labs, I expect this to continue. Furthermore, having a single product for many verticals instead of licensing many will save cost.
 
 ### **Counter Positioning**
