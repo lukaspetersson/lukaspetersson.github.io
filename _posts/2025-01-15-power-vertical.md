@@ -19,13 +19,13 @@ AI history teaches us a clear pattern: solutions that try to overcome model limi
 
 As chapter 1 showed, products that use more capable models with fewer constraints will eventually achieve better performance. Yet solutions based on current models (which use engineering effort to reduce mistakes by introducing human bias) will likely reach the market first. To be clear, this post discusses the scenario where we enter the green area of Figure 1 and whether AI verticals can maintain their market share as more performant horizontal agents become available.
 
-{% include figure.liquid loading="eager" path="assets/img/comp_easy.png" class="img-fluid rounded z-depth-1" width="40%" %}
+{% include figure.liquid loading="eager" path="assets/img/comp_easy.png" class="img-fluid rounded z-depth-1" width="80%" %}
 
 *Figure 1, performance trajectory comparison between vertical and horizontal AI products over time, showing three distinct phases: traditional software dominance, vertical AI market entry, and horizontal AI advancement with improved models.*
 
 Of course, Figure 1 is simplistic. These curves look different depending on the difficulty of the problem. Most problems which AI has potential to solve are so hard that AI verticals will never reach acceptable performance, as illustrated in Figure 2. These problems are largely out of scope and not attempted by any startups today. So even if they make up the majority of potential AI applications, they represent a minority among today's AI applications.
 
-{% include figure.liquid loading="eager" path="assets/img/comp_hard.png" class="img-fluid rounded z-depth-1" width="40%" %}
+{% include figure.liquid loading="eager" path="assets/img/comp_hard.png" class="img-fluid rounded z-depth-1" width="80%" %}
 
 *Figure 2, unlike Figure 1, this shows a harder problem where vertical AI products never reach adequate performance levels, even as horizontal AI achieves superior results with improved models.*
 
@@ -95,7 +95,7 @@ Brand power is typically out of reach for companies at this scale. See Figure 3.
 
 Similarly, process power is typically out of reach for companies at this scale. See Figure 3.
 
-{% include figure.liquid loading="eager" path="assets/img/power_stages.png" class="img-fluid rounded z-depth-1" width="40%" %}
+{% include figure.liquid loading="eager" path="assets/img/power_stages.png" class="img-fluid rounded z-depth-1" width="80%" %}
 
 *Figure 3, the three phases of business growth and the Powers most often found at each stage.*
 
