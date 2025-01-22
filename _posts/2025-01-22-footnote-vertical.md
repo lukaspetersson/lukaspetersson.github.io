@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Founder's Bitter Lesson. Chapter 3 - A Footnote in History
-date: 2025-01-08
+date: 2025-01-22
 description:
 tags: AI applications, Startups
 categories: 
@@ -26,7 +26,7 @@ For example, the flow from A to B means that a user who used to prefer solution 
 
 The terms vertical/horizontal and workflow/agent define different types of AI products. See [chapter 1](https://lukaspetersson.com/blog/2025/bitter-vertical/) for these definitions. For simplicity, the diagram combines horizontal agents and workflows into one category. This makes sense because the same companies will likely build both types. For example, ChatGPT might add more agent-like features while keeping its workflow base.
 
-{% include figure.liquid loading="eager" path="assets/img/preds.png" class="img-fluid rounded z-depth-1" width="80%" %}
+{% include figure.liquid loading="eager" path="assets/img/preds.png" class="img-fluid rounded z-depth-1" width="100%" %}
 *Figure 1: Projected shifts in solution adoption patterns from 2022 to 2027. The diagram shows how user preferences flow between traditional solutions and newer horizontal (workflow + agent) and vertical approaches. The width of each flow indicates relative adoption strength, measured by where users choose to implement new solutions or switch existing ones.*
 
 ### The Past
@@ -63,19 +63,19 @@ The terms vertical/horizontal and workflow/agent define different types of AI pr
 
 These predictions assume that AI will continue to improve. We will soon discuss if this is reasonable to expect, but first, let me motivate my choice of the word “continue”. I hear a lot of people claiming that the models have already stagnated. The claim is that we saw no meaningful improvement over GPT-4 in all of 2024. To be fair, I think this narrative has gone more quiet after the release of o3 in December. Figure 2 shows the performance on the famous ARC-AGI benchmark over time. Judge yourself if you think AI improvements have slowed down.
 
-{% include figure.liquid loading="eager" path="assets/img/arc.png" class="img-fluid rounded z-depth-1" width="80%" %}
+{% include figure.liquid loading="eager" path="assets/img/arc.png" class="img-fluid rounded z-depth-1" width="60%" %}
 *Figure 2: Performance on ARC-AGI benchmark*
 
 Even without o3, I still think it is ridiculous to say that models stagnated in 2024. Actually, o3 didn’t update my timeline predictions at all [1]. The zero-to-one moment was o1, which btw, also was released in 2024. But maybe, scaling test time compute does not impress you. After all, high test time compute might be too expensive to use for agents. However, let's remember what the state of base models were at the start of the year. We had GPT4-turbo which was limited to only text and images. During 2024, OpenAI released GPT4o with audio and video modalities. At the time of the release, it wasn’t a huge intelligence upgrade from GPT4, but since, it has been incrementally upgraded. It is easy to forget how much better it now is.
 
 2024 also saw big improvements for open weight models. On benchmarks with Ph.D-level science questions, we started the year with the best models barely being better than random guessing. By July, we were halfway to human expert level and before the end of the year Deep Seek V3 made an equally sized jump. in 2023 we went from 25-29 (+4), in 2024 29-59 (+20).
 
-{% include figure.liquid loading="eager" path="assets/img/epoch.png" class="img-fluid rounded z-depth-1" width="80%" %}
+{% include figure.liquid loading="eager" path="assets/img/epoch.png" class="img-fluid rounded z-depth-1" width="90%" %}
 *Figure 3: Open weight model performance on GPQA Diamond*
 
 However, the biggest contributor of 2024’s improvements was Anthropic. At the start of the year, they had Claude 2 (unusable), in March they released Claude 3 (state of the art), in June they released Claude 3.5 Sonnet (another huge jump). Judging from Figure 4, the spring of 2024 seem to have been the period with the most improvements from base models to date. But what about the fall? Anthropic said that they would release Claude 3.5 Opus by the end of the year, but then quietly removed this from their website. Did the training “fail”? Only Anthropic have the answers here, but [many](https://semianalysis.com/2024/12/11/scaling-laws-o1-pro-architecture-reasoning-training-infrastructure-orion-and-claude-3-5-opus-failures/) have hypothesized that it didn’t, but that Anthropic saw no economic benefit from publicly releasing it. Instead they used it to generate synthetic data for Claude 3.5 Sonnet. This is supported by the fact that Sonnet saw yet another upgrade in October. This is not what model stagnation looks like.
 
-{% include figure.liquid loading="eager" path="assets/img/claude_progress.png" class="img-fluid rounded z-depth-1" width="80%" %}
+{% include figure.liquid loading="eager" path="assets/img/claude_progress.png" class="img-fluid rounded z-depth-1" width="90%" %}
 *Figure 4: Progress of frontier models on a mix of benchmarks*
 
 ### Potential Roadblocks
@@ -88,7 +88,7 @@ While this timeline represents my best guess, several things could change this p
 
 Furthermore, as Dylan Patel [points out](https://semianalysis.com/2024/12/11/scaling-laws-o1-pro-architecture-reasoning-training-infrastructure-orion-and-claude-3-5-opus-failures/), the leaders in AI development are doubling down on their AI bets by investing more than ever in compute infrastructure. “key decision makers appear to be unwavering in their conviction that scaling laws are alive and well”. Even Yann LeCun, known for being skeptical about language models, seem to have shortened his timelines recently. In December he [said](https://www.youtube.com/watch?v=UmxlgLEscBs) that superintelligence is “very far away” but then added “when I say far away, it is not centuries, it may not be decades, but it is several years”].
 
-{% include figure.liquid loading="eager" path="assets/img/illya.png" class="img-fluid rounded z-depth-1" width="80%" %}
+{% include figure.liquid loading="eager" path="assets/img/illya.png" class="img-fluid rounded z-depth-1" width="100%" %}
 *Figure 5: Illya Sutskever's talk at NeurIPS 2024*
 
 Regulation
@@ -112,7 +112,7 @@ OpenAI’s o3 proved that it is possible to spend a lot of money on inference fo
 
 Predicting technological change is notoriously difficult, and the roadblocks discussed above could alter this timeline significantly. However, if this trajectory holds, startups in the AI application layer face a challenging situation. They’ll likely struggle to compete with AI labs in building horizontal products, while the window for creating value through vertical applications will be short-lived. As shown in Figure 4, I expect the total value of startups in this space to follow an inverted U-shape curve - rising as engineering effort creates initial value, then falling as better models make that engineering work obsolete.
 
-{% include figure.liquid loading="eager" path="assets/img/u_shape.png" class="img-fluid rounded z-depth-1" width="80%" %}
+{% include figure.liquid loading="eager" path="assets/img/u_shape.png" class="img-fluid rounded z-depth-1" width="90%" %}
 *Figure 7: Graph showing the expected value of AI application layer startups over time, divided into three phases.*
 
 This might seem discouraging for founders. I got a lot of comments on chapter 1 and 2 along the lines of “so you are saying we should just give up?”, but this is not at all what I am saying. There are plenty of problems out there, an AI app is far from the only thing you can do. For founders considering their next move, there are several questions: Could building a vertical application serve as strategic positioning for future opportunities? If not, what else can I build? Chapter 4 will explore these questions!
