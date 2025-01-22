@@ -31,32 +31,33 @@ The terms vertical/horizontal and workflow/agent define different types of AI pr
 
 ### The Past
 
-1. Pre-ChatGPT era - market dominated by traditional software.
+(1) Pre-ChatGPT era - market dominated by traditional software.
 
-2. ChatGPT release - the first significant horizontal AI product.
+(2) ChatGPT release - the first significant horizontal AI product.
 
-3. GPT-3.5 API release - first wave of AI verticals.
+(3) GPT-3.5 API release - first wave of AI verticals.
 
 ### This year
 
-{start=4}
-4. 2025 will mark a turning point where models become reliable enough for practical agent applications. Until now, agents have existed primarily as research projects or limited proof-of-concepts. While their initial deployment will be modest, their potential impact will become evident. Growth will come from two sources: vertical products upgrading their workflows to agents, and entirely new applications replacing traditional software in ways workflows couldn’t.
+(4) 2025 will mark a turning point where models become reliable enough for practical agent applications. Until now, agents have existed primarily as research projects or limited proof-of-concepts. While their initial deployment will be modest, their potential impact will become evident. Growth will come from two sources: vertical products upgrading their workflows to agents, and entirely new applications replacing traditional software in ways workflows couldn’t.
 
-5. Despite agent emergence, vertical workflows will maintain their dominant position through 2025. This persistence stems from two types of switching costs: users’ resistance to changing established tools, and developers’ reluctance to abandon their engineering investments from previous years. The market position these products secured in earlier years creates significant inertia.
+(5) Despite agent emergence, vertical workflows will maintain their dominant position through 2025. This persistence stems from two types of switching costs: users’ resistance to changing established tools, and developers’ reluctance to abandon their engineering investments from previous years. The market position these products secured in earlier years creates significant inertia.
 
-6. The major horizontal AI products (ChatGPT, Claude, and Gemini) will add more features to increase the number of verticals they are useful in. This has already started. For example, ChatGPT now integrates with other desktop apps on your computer. Better models will allow these companies to do this with minimal engineering effort. As these products improve, vertical AI products will find sales harder as people realize that their use-case can be done with a horizontal AI product they already use.
+(6) The major horizontal AI products (ChatGPT, Claude, and Gemini) will add more features to increase the number of verticals they are useful in. This has already started. For example, ChatGPT now integrates with other desktop apps on your computer. Better models will allow these companies to do this with minimal engineering effort. As these products improve, vertical AI products will find sales harder as people realize that their use-case can be done with a horizontal AI product they already use.
 
 ### The (near) future
 
-{start=7}
-7. The capability gap between horizontal AI agents and human workers will narrow dramatically. They are not yet at expert level in all domains, but smart enough to reliably handle most tasks which humans typically perform in various traditional software tools. Many humans still keep their jobs, but vertical AI solutions become obsolete. Here are some things I expect this to lead to:
+(7). The capability gap between horizontal AI agents and human workers will narrow dramatically. They are not yet at expert level in all domains, but smart enough to reliably handle most tasks which humans typically perform in various traditional software tools. Many humans still keep their jobs, but vertical AI solutions become obsolete. Here are some things I expect this to lead to:
+
    a. Consumers will routinely use horizontal agents for complex tasks like tax preparation, job applications, and non-leisure shopping.
+
    b. Companies will significantly reduce junior-level hiring, with some implementing large-scale layoffs. However, adoption will lag behind theoretical capabilities.
+
    c. We see the first one-person unicorn.
 
-8. Traditional software will retain value by providing interfaces for agents. While agents could theoretically create the software they need from scratch, computational costs of running the agent make existing software platforms more practical. However, traditional software is not free. I expect that it is the traditional horizontal software that will have the best chance to survive. This is because while agents are not free to run, they are much cheaper than humans. You can, for example, implement a CRM system in excel, but it make sense to buy a specialized CRM system to save a human’s time. But it is not certain that this math checks out for agents.
+(8) Traditional software will retain value by providing interfaces for agents. While agents could theoretically create the software they need from scratch, computational costs of running the agent make existing software platforms more practical. However, traditional software is not free. I expect that it is the traditional horizontal software that will have the best chance to survive. This is because while agents are not free to run, they are much cheaper than humans. You can, for example, implement a CRM system in excel, but it make sense to buy a specialized CRM system to save a human’s time. But it is not certain that this math checks out for agents.
 
-9. The only vertical AI applications that survive will be those that locked in a defensible resource, as discussed in Chapter 2. Some will choose to sell their resource for a lot of money.
+(9) The only vertical AI applications that survive will be those that locked in a defensible resource, as discussed in Chapter 2. Some will choose to sell their resource for a lot of money.
 
 ## 2024 - has progress stopped?
 
