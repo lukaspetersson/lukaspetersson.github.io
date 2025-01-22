@@ -105,7 +105,7 @@ The current version of Claude compute use refuses to log in into websites, even 
 
 Expensive Inference
 
-OpenAI’s o3 proved that it is possible to spend a lot of money on inference for a single problem and actually get better results. For example, [solving problems on the ARC benchmark cost thousands of dollars per task](%5Bhttps://arcprize.org/blog/oai-o3-pub-breakthrough%5D(https://arcprize.org/blog/oai-o3-pub-breakthrough)). We might get something similar to Paul Buchheit’s theory, shown in Figure 3. We might achieve the capabilities needed to make a horizontal agent work in every vertical, but find it impractical due to high running costs. However, inference costs have so far dropped steadily. It is also unlikely that the horizontal agent would use max inference compute for every action.
+OpenAI’s o3 proved that it is possible to spend a lot of money on inference for a single problem and actually get better results. For example, [solving problems on the ARC benchmark cost thousands of dollars per task](https://arcprize.org/blog/oai-o3-pub-breakthrough). We might get something similar to Paul Buchheit’s theory, shown in Figure 3. We might achieve the capabilities needed to make a horizontal agent work in every vertical, but find it impractical due to high running costs. However, inference costs have so far dropped steadily. It is also unlikely that the horizontal agent would use max inference compute for every action.
 
 {% include figure.liquid loading="eager" path="assets/img/pb_tweet.png" class="img-fluid rounded z-depth-1" width="80%" %}
 *Figure 6: Paul Buchheit's tweet*
