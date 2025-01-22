@@ -2,7 +2,7 @@
 layout: post
 title: AI Founder's Bitter Lesson. Chapter 3 - A Footnote in History
 date: 2025-01-22
-description:
+description: AI vertical applications will have a brief moment of opportunity as models mature enough to be useful but still need engineering guardrails, but by 2027 more capable models will make most vertical applications obsolete as users shift to general-purpose AI agents.
 tags: AI, Startups
 categories: 
 featured: false
