@@ -3,7 +3,7 @@ layout: post
 title: AI Founder's Bitter Lesson. Chapter 3 - A Footnote in History
 date: 2025-01-22
 description:
-tags: AI applications, Startups
+tags: AI, Startups
 categories: 
 featured: false
 pretty_table: true

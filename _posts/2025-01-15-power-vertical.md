@@ -3,7 +3,7 @@ layout: post
 title: AI Founder's Bitter Lesson. Chapter 2 - No Power
 date: 2025-01-15
 description: Vertical AI products will lose market share to horizontal AI competitors unless protected by cornered resources.
-tags: AI applications, Startups
+tags: AI, Startups
 categories: 
 featured: false
 pretty_table: true

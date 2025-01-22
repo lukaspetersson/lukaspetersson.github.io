@@ -3,7 +3,7 @@ layout: post
 title: AI Founder's Bitter Lesson. Chapter 1 - History Repeats Itself
 date: 2025-01-08
 description: Historically, general approaches always win in AI. Founders in AI application space now repeat the mistakes of AI researchers.
-tags: AI applications, Startups
+tags: AI, Startups
 categories: 
 featured: false
 pretty_table: true
