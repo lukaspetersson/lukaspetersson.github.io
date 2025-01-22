@@ -39,6 +39,7 @@ The terms vertical/horizontal and workflow/agent define different types of AI pr
 
 ### This year
 
+{start=4}
 4. 2025 will mark a turning point where models become reliable enough for practical agent applications. Until now, agents have existed primarily as research projects or limited proof-of-concepts. While their initial deployment will be modest, their potential impact will become evident. Growth will come from two sources: vertical products upgrading their workflows to agents, and entirely new applications replacing traditional software in ways workflows couldn’t.
 
 5. Despite agent emergence, vertical workflows will maintain their dominant position through 2025. This persistence stems from two types of switching costs: users’ resistance to changing established tools, and developers’ reluctance to abandon their engineering investments from previous years. The market position these products secured in earlier years creates significant inertia.
@@ -47,13 +48,11 @@ The terms vertical/horizontal and workflow/agent define different types of AI pr
 
 ### The (near) future
 
+{start=7}
 7. The capability gap between horizontal AI agents and human workers will narrow dramatically. They are not yet at expert level in all domains, but smart enough to reliably handle most tasks which humans typically perform in various traditional software tools. Many humans still keep their jobs, but vertical AI solutions become obsolete. Here are some things I expect this to lead to:
-
-   1. Consumers will routinely use horizontal agents for complex tasks like tax preparation, job applications, and non-leisure shopping.
-
-   2. Companies will significantly reduce junior-level hiring, with some implementing large-scale layoffs. However, adoption will lag behind theoretical capabilities.
-
-   3. We see the first one-person unicorn.
+   a. Consumers will routinely use horizontal agents for complex tasks like tax preparation, job applications, and non-leisure shopping.
+   b. Companies will significantly reduce junior-level hiring, with some implementing large-scale layoffs. However, adoption will lag behind theoretical capabilities.
+   c. We see the first one-person unicorn.
 
 8. Traditional software will retain value by providing interfaces for agents. While agents could theoretically create the software they need from scratch, computational costs of running the agent make existing software platforms more practical. However, traditional software is not free. I expect that it is the traditional horizontal software that will have the best chance to survive. This is because while agents are not free to run, they are much cheaper than humans. You can, for example, implement a CRM system in excel, but it make sense to buy a specialized CRM system to save a human’s time. But it is not certain that this math checks out for agents.
 
