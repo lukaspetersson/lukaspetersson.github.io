@@ -8,6 +8,7 @@ categories:
 featured: false
 pretty_table: true
 giscus_comments: true
+thumbnail: /assets/img/perf-vs-effort.png
 ---
 
 *tl;dr:*

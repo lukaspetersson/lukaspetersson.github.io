@@ -8,6 +8,7 @@ categories:
 featured: false
 pretty_table: true
 giscus_comments: true
+thumbnail: /assets/img/comp_easy.png
 ---
 *tl;dr:*
 * Horizontal AI products will eventually outperform vertical AI products in most verticals. AI verticals were first to market, but who will win in the long run?

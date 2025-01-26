@@ -8,6 +8,7 @@ categories:
 featured: false
 pretty_table: true
 giscus_comments: true
+thumbnail: /assets/img/preds.png
 ---
 
 *I wrote this in December. Right as I was about to publish it, the CEO of Anthropic gave an interview explaining his [plan](https://www.youtube.com/watch?v=7LNyUbii0zw) for a "virtual collaborator". This is a great explanation of what I have called the "horizontal AI product" throughout this series. OpenAI is rumored to be releasing "Operator" within the next few days, which is their version of this. [Leaked benchmarks](https://youtube.com/watch?v=59Etzj5gvsE) seem to suggest that Operator outperforms Claude's computer use by a big margin (22% vs 38% on the OSWorld benchmark). This is a big jump, but it's in line with what I expected 3 months of progress would yield (Claude's computer use was released in October). I therefore stand by my predictions from December.*
