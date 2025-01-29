@@ -46,6 +46,28 @@
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
 
+          {% if site.navbar_additional_links %}
+            {% for item in site.navbar_additional_links %}
+              <li class="nav-item">
+                {% if item.url contains '://' %}
+                  <!-- External link (open in new tab) -->
+                  <a class="nav-link"
+                     href="{{ item.url }}"
+                     target="_blank"
+                     rel="noopener">
+                    {{ item.title }}
+                  </a>
+                {% else %}
+                  <!-- Internal link (open in same tab) -->
+                  <a class="nav-link" href="{{ item.url | relative_url }}">
+                    {{ item.title }}
+                  </a>
+                {% endif %}
+              </li>
+            {% endfor %}
+          {% endif %}
+
+
           <!-- About -->
           <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
             <a class="nav-link" href="{{ '/' | relative_url }}">

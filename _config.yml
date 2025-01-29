@@ -49,6 +49,10 @@ search_enabled: false
 socials_in_search: false
 bib_search: false
 
+navbar_additional_links:
+  - title: "podcast"
+    url: "https://open.spotify.com/show/4xZHGPe167lfPZIFFKTB9l"
+
 # Dimensions
 max_width: 930px
 
@@ -95,7 +99,7 @@ research_gate_profile: # your profile on ResearchGate
 scholar_userid: # your Google Scholar ID
 scopus_id: # your profile on Scopus
 semanticscholar_id: # your Semantic Scholar ID
-spotify_id: 4xZHGPe167lfPZIFFKTB9l # your spotify id
+spotify_id: # your spotify id
 stackoverflow_id: # your stackoverflow id
 telegram_username: # your Telegram user name
 unsplash_id: # your unsplash id
