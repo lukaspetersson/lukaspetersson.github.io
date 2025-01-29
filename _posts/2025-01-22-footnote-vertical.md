@@ -116,7 +116,7 @@ Predicting technological change is notoriously difficult, and the roadblocks dis
 {% include figure.liquid loading="eager" path="assets/img/u_shape.png" class="img-fluid rounded z-depth-1" width="90%" %}
 *Figure 7: Graph showing the expected value of AI application layer startups over time, divided into three phases.*
 
-This might seem discouraging for founders. I got a lot of comments on chapter 1 and 2 along the lines of “so you are saying we should just give up?”, but this is not at all what I am saying. There are plenty of problems out there, an AI app is far from the only thing you can do. For founders considering their next move, there are several questions: Could building a vertical application serve as strategic positioning for future opportunities? If not, what else can I build? Chapter 4 will explore these questions!
+This might seem discouraging for founders. I got a lot of comments on chapters 1 and 2 along the lines of “so you are saying we should just give up?”, but this is not at all what I am saying. There are plenty of problems out there, an AI app is far from the only thing you can do. For founders considering their next move, there are several questions: Could building a vertical application serve as strategic positioning for future opportunities? If not, what else can I build? Chapter 4 will explore these questions!
 
 Notes:
 

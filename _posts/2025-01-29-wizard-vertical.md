@@ -13,7 +13,7 @@ thumbnail: /assets/img/wizard.png
 
 *Recap of previous chapters is discussed at 14:28 [here](https://open.spotify.com/episode/0mRIA7GvOnDfLFZjXMtGYi?si=4e59b786799d4da8)*
 
-As outlined in chapter 3, I suspect that the AI application space will be very tough for startups in the coming years. The revenue growth of these companies is currently [very impressive](https://www.youtube.com/watch?v=0LMK5JYkB94), and this slope will remain positive throughout the year, but by 2027, models are so strong that horizontal offerings from the AI labs will dominate. This might seem discouraging for founders. I got a lot of comments on chapter 1 and 2 along the lines of “so you are saying we should just give up?”, but this is not at all what I am saying. There are plenty of problems out there, an AI app is far from the only thing you can do.
+As outlined in chapter 3, I suspect that the AI application space will be very tough for startups in the coming years. The revenue growth of these companies is currently [very impressive](https://www.youtube.com/watch?v=0LMK5JYkB94), and this slope will remain positive throughout the year, but by 2027, models are so strong that horizontal offerings from the AI labs will dominate. This might seem discouraging for founders. I got a lot of comments on chapters 1 and 2 along the lines of “so you are saying we should just give up?”, but this is not at all what I am saying. There are plenty of problems out there, an AI app is far from the only thing you can do.
 
 {% include figure.liquid loading="eager" path="assets/img/wizard.png" class="img-fluid rounded z-depth-1" width="80%" %}
 Figure 1: Illustration of the fact that you are a wizard.
