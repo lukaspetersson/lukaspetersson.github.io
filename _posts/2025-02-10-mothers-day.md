@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mother's Day Gift recommendations
+title: Mother's Day Gift Recommendations
 date: 2025-02-10
 description: There was a brief moment in time when learning AI tools was a great idea. That moment has passed. What is the new advice to stay ahead?
 tags: AI, AGI
@@ -11,7 +11,7 @@ giscus_comments: true
 thumbnail: /assets/img/trojan_horse.png
 ---
 
-{% include figure.liquid loading="eager" path="assets/img/trojan_horse.png" class="img-fluid rounded z-depth-1" width="80%" %}
+{% include figure.liquid loading="eager" path="assets/img/trojan_horse.png" class="img-fluid rounded z-depth-1" width="70%" %}
 
 I was particularly proud of my Mother's Day gift for 2023. After the release of ChatGPT in late November 2022, I was running around like an evangelist trying to convince everyone and their mother that they needed to learn the latest AI tools. 
 
