@@ -19,7 +19,9 @@ This was at least how the man next to me on the plane described it. After a quic
 {% include figure.liquid loading="eager" path="assets/img/ikigai.png" class="img-fluid rounded z-depth-1" width="70%" %}
 
 The man on the plane had worked his entire life as the CEO of his own company. He had just recently semi-retired, and I don’t think I have ever seen someone so proud of something. Such pride over one’s career is surely the best conditions for a sweet retirement. But retiring fully he would never do he said. The lesson from the Japanese village resonated with him. Most of his friends had recently retired, and the ones that didn’t find a new purpose “died quickly” he said.
-The end of this world
+
+
+### The end of this world
 AI will soon be able to do almost all jobs we have in today’s economy. Some people don’t think this will be the end of the world. Previous technology shifts created more jobs than they replaced. “Look at the industrial revolution! Yes, machines replaced many jobs, but they created even more”. However, this is not just another technology shift. This time, we (humans) are replacing our defining characteristic, our intelligence. New types of work will certainly be needed, but AI will be able to do them too.
 
 {% include figure.liquid loading="eager" path="assets/img/homo_sapien.png" class="img-fluid rounded z-depth-1" width="70%" %}
@@ -51,6 +53,9 @@ This isn't really a prediction—it's more of a plausible story. As I said earli
 Follow me on [X](https://x.com/lukaspet) or subscribe via [RSS](https://lukaspetersson.com/feed.xml) to stay updated.
 
 [1] https://www.weforum.org/stories/2021/09/japan-okinawa-secret-to-longevity-good-health/
+
 [2] https://agpolicyreview.card.iastate.edu/fall-2022/electric-vehicles-horses-oats-and-ethanol-does-last-transportation-revolution-reveal
+
 [3] https://woodfromeden.substack.com/p/primates-of-manhattan
+
 Thanks to August Erseus, Rudolf Laine, Ollie Jaffe, Axel Backlund and Jakob Wiren for feedback <3
