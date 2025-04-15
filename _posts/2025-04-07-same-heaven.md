@@ -58,4 +58,4 @@ Follow me on [X](https://x.com/lukaspet) or subscribe via [RSS](https://lukaspet
 
 [3] https://woodfromeden.substack.com/p/primates-of-manhattan
 
-Thanks to August Erseus, Rudolf Laine, Ollie Jaffe, Axel Backlund and Jakob Wiren for feedback <3
+Thanks to August Erseus, Isak Lefvert, Rudolf Laine, Ollie Jaffe, Axel Backlund and Jakob Wiren for feedback <3
