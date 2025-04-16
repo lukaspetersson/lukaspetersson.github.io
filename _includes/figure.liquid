@@ -12,11 +12,9 @@
       <source
         class="responsive-img-srcset"
         {% if ext == '.jpg' or ext == '.jpeg' or ext == '.png' or ext == '.tiff' or ext == '.gif' %}
-          {# MODIFIED: Applied absolute_url to img_path before appending size/extension #}
           srcset="{% for i in site.imagemagick.widths %}{{ img_path | absolute_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
           type="image/webp"
         {% else %}
-          {# MODIFIED: Changed relative_url to absolute_url #}
           srcset="{{ include.path | absolute_url }}"
         {% endif %}
         {% if include.sizes %}
@@ -27,7 +25,6 @@
       >
     {% endif %}
     <img
-      {# MODIFIED: Changed relative_url to absolute_url. Applied before bust_file_cache if used. #}
       src="{% if include.cache_bust %}{{ include.path | absolute_url | bust_file_cache }}{% else %}{{ include.path | absolute_url }}{% endif %}"
       {% if include.class %}
         class="{{ include.class }}"
