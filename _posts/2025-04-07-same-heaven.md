@@ -50,7 +50,7 @@ This isn't really a prediction—it's more of a plausible story. As I said earli
 
 {% include figure.liquid loading="eager" path="assets/img/walle.png" class="img-fluid rounded z-depth-1" width="70%" %}
 
-Follow me on [X](https://x.com/lukaspet) or subscribe via [RSS](https://lukaspetersson.com/feed.xml) to stay updated.
+Follow me on [X](https://x.com/lukaspet) or subscribe via [RSS](https://lukaspetersson.com/feed.xml) or [Substack](https://lukaspet.substack.com/) to stay updated.
 
 [1] https://www.weforum.org/stories/2021/09/japan-okinawa-secret-to-longevity-good-health/
 

@@ -124,4 +124,4 @@ Notes:
 
 Thanks to [Axel Backlund](https://x.com/axelbacklund) for the discussions that led to this post.
 
-Follow me on [X](https://x.com/lukaspet) or subscribe via [RSS](https://lukaspetersson.com/feed.xml) to stay updated.
+Follow me on [X](https://x.com/lukaspet) or subscribe via [RSS](https://lukaspetersson.com/feed.xml) or [Substack](https://lukaspet.substack.com/) to stay updated.

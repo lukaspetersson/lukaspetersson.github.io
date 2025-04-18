@@ -50,4 +50,4 @@ I mentioned earlier in passing that we will soon have AI systems that are smarte
 What might be even better for one's mental health is to prepare for what to do when job losses occur. It will inevitably lead to many lost jobs. Perhaps the gift should be something that can inspire the start of a new hobby. However, I don't think my mom is at risk. She has already started to prepare for her retirement. She has already stopped defining herself by her work role. She has already achieved what she wanted from her career. The person at risk here is me. Therefore, my Mother's Day 2025 gift will be hiking gear that matches what I just got for myself.
 
 
-Follow me on [X](https://x.com/lukaspet) or subscribe via [RSS](https://lukaspetersson.com/feed.xml) to stay updated.
+Follow me on [X](https://x.com/lukaspet) or subscribe via [RSS](https://lukaspetersson.com/feed.xml) or [Substack](https://lukaspet.substack.com/) to stay updated.
