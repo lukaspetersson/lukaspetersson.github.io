@@ -50,4 +50,4 @@ My life is much better without what today's smartphones can offer. And since the
 
 Follow me on [X](https://x.com/lukaspet) or subscribe via [RSS](https://lukaspetersson.com/feed.xml) or [Substack](https://lukaspet.substack.com/) to stay updated.
 
-Thanks to Sebbi Fodor, August Ereus and Esben Kran for feedback <3
+Thanks to Sebbi Fodor, August Erséus and Esben Kran for feedback <3
