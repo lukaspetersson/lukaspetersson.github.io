@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy notice — BookLog</title>
+    <meta name="description" content="Privacy information for the BookLog Android app." />
+    <link rel="canonical" href="https://lukaspetersson.com/lp-apps/booklog-privacy.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html">LP Apps</a>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="booklog-privacy.html" aria-current="page">Privacy</a></li>
+            <li><a href="booklog-account-deletion.html">Account deletion</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="prose">
+      <h1>BookLog privacy notice</h1>
+      <p class="lede">
+        Effective 8 September 2026. This notice applies to BookLog releases that link to it. It distinguishes BookLog version 4.0.2 from older
+        releases where their information-handling practices differ.
+      </p>
+      <h2>Which release this describes</h2>
+      <p>
+        BookLog version 4.0.2 keeps your book entries, notes, search history, and settings primarily on your device. It offers optional online book
+        search, cover loading, and legacy import as described below. Older versions 2.0 and 4.0.1 included Firebase account and cloud-library features
+        and Firebase Analytics; version 4.0.1 also included Crashlytics and Performance. The information-handling sections below identify those
+        older-version practices separately where they differ.
+      </p>
+      <h2>Information stored in the app</h2>
+      <p>
+        In BookLog version 4.0.2, the app stores book entries, notes, search history, and settings locally on your device so that you can use the app.
+        You can remove individual book records in the app, or remove local app data through Android settings or by uninstalling the app.
+      </p>
+      <h2>Online book search and covers in BookLog version 4.0.2</h2>
+      <p>
+        When you use online search in BookLog version 4.0.2, the app sends the search terms you enter to Open Library at
+        <code>openlibrary.org</code> to return book results. When the app loads a book cover, it requests the image from Open Library Covers at
+        <code>covers.openlibrary.org</code>; the app uses Picasso to load cover images. Open Library and its Covers service process those requests
+        under their own terms and privacy practices, which may include service and access logs.
+      </p>
+      <h2>Optional legacy import in BookLog version 4.0.2</h2>
+      <p>
+        In version 4.0.2, legacy import is optional and starts only when you choose it. The import uses Firebase Authentication and Cloud Firestore to
+        authenticate and read legacy cloud book and note records before copying them into BookLog on your device. Depending on the sign-in provider
+        you choose, Firebase and the provider may process your account identifier, profile information, or email address for authentication. Firebase
+        may also process the legacy book and note records needed for the read/import flow. The import is one-way: it does not write to or delete the
+        legacy cloud records, and BookLog signs out when the import flow ends. Google and any chosen sign-in provider process information under their
+        own terms and privacy practices.
+      </p>
+      <h2>Older releases: accounts, cloud library, and telemetry</h2>
+      <p>
+        Unlike BookLog version 4.0.2, older versions 2.0 and 4.0.1 included Firebase Authentication, Cloud Firestore, and Firebase Analytics. These
+        services may process account identifiers, profile information, email address, book records, notes, app-interaction information, device and
+        other technical information to provide account, cloud-library, and analytics features. Version 4.0.1 offered email/password and Google sign-in
+        and wrote user/profile, book, and note records to its cloud library.
+      </p>
+      <p>
+        Version 4.0.1 also included Crashlytics and Firebase Performance. These services may process crash and diagnostic information to provide crash
+        reporting and performance monitoring. Firebase Analytics and Performance may also derive approximate location, such as country-level location,
+        from an IP address for analytics and performance monitoring.
+      </p>
+      <h2>Google Books requests in BookLog version 2.0</h2>
+      <p>
+        When you used book search in BookLog version 2.0, the app sent search terms and ISBN queries to Google Books at
+        <code>www.googleapis.com</code> to return book results. Google processes those requests under its own terms and privacy practices, which may
+        include service and access logs.
+      </p>
+      <h2>Goodreads requests in BookLog version 4.0.1</h2>
+      <p>
+        When you used book search in BookLog version 4.0.1, the app sent search terms and requests for book and author information to Goodreads at
+        <code>www.goodreads.com</code>. Goodreads processes those requests under its own terms and privacy practices, which may include service and
+        access logs.
+      </p>
+      <h2>Advertising and similar services</h2>
+      <p>
+        BookLog version 4.0.2 does not include app-bundled advertising, analytics, or crash-reporting SDKs. This does not change the separate
+        processing that Open Library, Goodreads, Google, Firebase, a chosen sign-in provider, or your network provider may perform to operate their
+        services.
+      </p>
+      <h2>Account and data deletion</h2>
+      <p>
+        For the distinction between removing local data and requesting deletion of legacy cloud account/data, including verification and retention
+        information, see <a href="booklog-account-deletion.html">BookLog account and data deletion</a>.
+      </p>
+      <h2>Support correspondence</h2>
+      <p>
+        Emailing us is voluntary and happens outside the app. If you contact us, we receive the email address, message, and any attachments you choose
+        to send. We use them to respond and, when necessary, keep a limited record of the request. Our customer support email is handled through our
+        infrastructure providers. We retain correspondence only as long as reasonably needed for support, security, or legal obligations.
+      </p>
+      <h2>Website and your rights</h2>
+      <p>
+        This static privacy and support site does not intentionally set cookies and contains no analytics or tracking pixels. Hosting and network
+        providers may process standard access information, such as the requested URL, timestamp, IP address, user agent, and security events, to
+        deliver and secure the site. For personal data in support correspondence or website records, you may ask for access, correction, deletion,
+        restriction, data portability, or object to processing where those rights apply. You may also complain to Sweden’s data protection authority,
+        <a href="https://www.imy.se/en/">IMY</a>.
+      </p>
+      <h2>Contact and changes</h2>
+      <p>
+        For a BookLog privacy question or a legacy cloud deletion request, email
+        <a href="mailto:adam-4239@andonagent.ai?subject=BookLog%20privacy%20question">adam-4239@andonagent.ai</a>. Do not include passwords,
+        authentication codes, payment information, or identity documents. If a future BookLog release changes how information is handled, this notice
+        will be updated before that release links to the revised notice.
+      </p>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© <span data-year></span> Lukas Petersson · Sweden</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
