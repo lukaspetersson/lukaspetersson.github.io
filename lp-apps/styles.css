@@ -50,4 +50,7 @@ code { background: #ebe2d6; padding: .1rem .3rem; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
 
 .language-links { display: flex; gap: 1rem; margin: 1.5rem 0 2.25rem; font: 650 .92rem/1.4 system-ui, sans-serif; }
+.score-reference { border-collapse: collapse; width: 100%; font: .9rem/1.35 system-ui, sans-serif; }
+.score-reference th, .score-reference td { padding: .55rem .4rem; border-bottom: 1px solid var(--line); text-align: left; }
+@media (max-width: 440px) { .score-reference { font-size: .78rem; } .score-reference th, .score-reference td { padding-inline: .2rem; } }
 hr { border: 0; border-top: 1px solid var(--line); margin: 4rem 0; }
