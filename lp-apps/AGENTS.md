@@ -5,7 +5,7 @@ This directory is the static public site at `https://lukaspetersson.com/lp-apps/
 ## Layout
 
 - `index.html` and `index-sv.html`: English and Swedish portfolio hubs.
-- `booklog-reading-notes*.html`: paired BookLog guides.
+- `booklog-reading-notes*.html` and `booklog-diario-de-leitura.html`: English, Swedish and Brazilian Portuguese BookLog guides.
 - `falling-kitten-how-to-play*.html`: paired Falling Kitten guides.
 - `brannball-guide.html`: Swedish BrännballCounter guide.
 - `*-privacy.html`, support and deletion pages: controlling public policy/support content. Do not broaden or translate legal claims without source evidence.
@@ -17,7 +17,7 @@ This directory is the static public site at `https://lukaspetersson.com/lp-apps/
 
 - Keep pages static and dependency-free. Use semantic HTML and the existing design tokens/classes.
 - Preserve exact app package IDs and first-party canonical URLs.
-- English/Swedish page pairs need reciprocal `hreflang="en"`, `hreflang="sv-SE"` and `hreflang="x-default"`, self-canonicals and visible language links.
+- Localized guides need reciprocal `hreflang="en"`, `hreflang="sv-SE"`, `hreflang="pt-BR"` (BookLog) and `hreflang="x-default"`, self-canonicals and visible language links.
 - Play links may keep a campaign referrer, but attribution is never assumed. Swedish links use `hl=sv&gl=SE`.
 - Use only verified product behavior. Do not claim goals, streaks, analytics, social features, cloud sync, barcode scanning, install growth or official sports rules unless current source evidence supports it.
 - Do not invent app screenshots. Clearly branded site artwork is acceptable when it is not presented as in-app UI.
@@ -39,5 +39,7 @@ Before publication:
 ## Publication
 
 The controlling source is the GitHub repository. In this environment use the GitHub REST API with `gh` and `GH_TOKEN='{{secret:github-token}}'`; never use git-over-HTTPS. Publish against a verified base commit with a non-force Git Data ref update, then verify the `Deploy site` GitHub Actions run and the custom-domain output.
+
+The `Deploy site` workflow filters HTML/CSS/JS/assets and does not run for a sitemap-only change. After such a commit, dispatch `deploy.yml` on `master` with `gh workflow run deploy.yml --repo lukaspetersson/lukaspetersson.github.io --ref master`, then verify the run and live sitemap. Do not dispatch while another deployment is in progress.
 
 Keep local test reports, screenshots and operational receipts outside the public repository under `~/lp-apps/`; do not commit generated audit bulk.
