@@ -54,3 +54,21 @@ code { background: #ebe2d6; padding: .1rem .3rem; }
 .score-reference th, .score-reference td { padding: .55rem .4rem; border-bottom: 1px solid var(--line); text-align: left; }
 @media (max-width: 440px) { .score-reference { font-size: .78rem; } .score-reference th, .score-reference td { padding-inline: .2rem; } }
 hr { border: 0; border-top: 1px solid var(--line); margin: 4rem 0; }
+
+#lookup-form { margin: 2.5rem 0 1rem; }
+#lookup-form label { display: block; margin-bottom: .55rem; font: 650 .95rem/1.4 system-ui, sans-serif; }
+#lookup-form > div { display: flex; flex-wrap: wrap; gap: .6rem; }
+#lookup-query { flex: 1 1 16rem; min-width: 0; padding: .65rem .8rem; border: 1px solid var(--line); border-radius: .25rem; background: var(--surface); color: var(--ink); font: 1rem/1.4 system-ui, sans-serif; }
+#lookup-query:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+#lookup-form button { min-height: 2.8rem; padding: .55rem .95rem; border: 1px solid var(--blue); border-radius: .25rem; background: var(--blue); color: white; font: 650 .88rem/1.3 system-ui, sans-serif; cursor: pointer; }
+#lookup-form button[type="reset"] { background: transparent; color: var(--blue); }
+#lookup-form button:disabled { opacity: .6; cursor: wait; }
+#lookup-status { color: var(--muted); }
+#lookup-results ol { list-style: none; counter-reset: books; padding: 0; margin: 1.6rem 0; }
+#lookup-results li { counter-increment: books; padding: 1.25rem 0; border-top: 1px solid var(--line); }
+#lookup-results li:last-child { border-bottom: 1px solid var(--line); }
+#lookup-results h2 { margin: 0 0 .55rem; font-size: 1.35rem; }
+#lookup-results h2::before { content: counter(books, decimal-leading-zero) '  '; color: var(--rust); font-size: .85rem; vertical-align: .12em; }
+#lookup-results p { margin: .3rem 0; }
+#play-cta a { display: inline-block; padding: .65rem .9rem; border: 1px solid var(--blue); border-radius: .25rem; font: 700 .9rem/1.4 system-ui, sans-serif; }
+@media (max-width: 440px) { #lookup-form button { flex: 1; } }

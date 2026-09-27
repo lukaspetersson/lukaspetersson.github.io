@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book lookup for BookLog — LP Apps</title>
+    <meta name="description" content="Look up book titles, authors, or ISBNs in Open Library before adding a book to BookLog." />
+    <meta property="og:type" content="website" /><meta property="og:site_name" content="LP Apps" /><meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://lukaspetersson.com/lp-apps/booklog-book-lookup.html" /><meta property="og:title" content="Book lookup for BookLog — LP Apps" />
+    <meta property="og:description" content="Look up book titles, authors, or ISBNs in Open Library before adding a book to BookLog." /><meta property="og:image" content="https://lukaspetersson.com/lp-apps/social-booklog.png" />
+    <meta property="og:image:width" content="3600" /><meta property="og:image:height" content="1890" /><meta property="og:image:alt" content="LP Apps BookLog guide" />
+    <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Book lookup for BookLog — LP Apps" /><meta name="twitter:description" content="Look up book titles, authors, or ISBNs in Open Library before adding a book to BookLog." /><meta name="twitter:image" content="https://lukaspetersson.com/lp-apps/social-booklog.png" />
+    <link rel="canonical" href="https://lukaspetersson.com/lp-apps/booklog-book-lookup.html" />
+    <link rel="alternate" hreflang="en" href="https://lukaspetersson.com/lp-apps/booklog-book-lookup.html" /><link rel="alternate" hreflang="sv-SE" href="https://lukaspetersson.com/lp-apps/booklog-book-lookup-sv.html" /><link rel="alternate" hreflang="x-default" href="https://lukaspetersson.com/lp-apps/booklog-book-lookup.html" />
+    <link rel="stylesheet" href="styles.css?v=booklookup20260926" />
+  </head>
+  <body>
+    <header class="site-header"><div class="header-inner"><a class="brand" href="index.html">LP Apps</a><nav aria-label="Primary"><ul><li><a href="index.html">Home</a></li><li><a href="booklog-privacy.html">Privacy</a></li><li><a href="booklog-account-deletion.html">Account deletion</a></li></ul></nav></div></header>
+    <main class="prose">
+      <div class="language-links" aria-label="Language"><a href="booklog-book-lookup.html" aria-current="page">English</a><a href="booklog-book-lookup-sv.html" lang="sv">Svenska</a></div>
+      <h1>Find a book for BookLog</h1>
+      <p class="lede">Search by title, author, or ISBN. Review a result, then enter the details yourself in BookLog.</p>
+      <form id="lookup-form">
+        <label for="lookup-query">Book title, author, or ISBN</label>
+        <div><input id="lookup-query" name="q" type="search" required maxlength="200" autocomplete="off" /><button type="submit">Search books</button><button type="reset">Clear</button></div>
+      </form>
+      <p id="lookup-status" role="status" aria-live="polite">Enter a search term to look up books.</p>
+      <section id="lookup-results" aria-label="Search results" aria-live="polite"></section>
+      <p class="notice"><strong>Privacy:</strong> When you search, the text you submit is sent to <a href="https://openlibrary.org/">Open Library</a> to find matching book records. Do not include private information. This page does not store your search or sync results with BookLog.</p>
+      <p><a href="booklog-reading-notes.html">How to add a book and reading note in BookLog</a></p>
+      <p id="play-cta" hidden><a href="https://play.google.com/store/apps/details?id=com.lukas.android.booklog&amp;referrer=utm_source%3Dlp_apps%26utm_medium%3Dreferral%26utm_campaign%3Dportfolio_2026">Get BookLog on Google Play</a></p>
+    </main>
+    <footer class="site-footer"><div class="footer-inner"><p>© <span data-year></span> Lukas Petersson · Sweden</p></div></footer>
+    <script src="script.js"></script><script src="book-lookup.js" defer></script>
+  </body>
+</html>

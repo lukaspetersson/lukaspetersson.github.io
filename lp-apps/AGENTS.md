@@ -5,7 +5,7 @@ This directory is the static public site at `https://lukaspetersson.com/lp-apps/
 ## Layout
 
 - `index.html` and `index-sv.html`: English and Swedish portfolio hubs.
-- `booklog-reading-notes*.html` and `booklog-diario-de-leitura.html`: English, Swedish and Brazilian Portuguese BookLog guides.
+- `booklog-reading-notes*.html` and `booklog-diario-de-leitura.html`: English, Swedish and Brazilian Portuguese BookLog guides; `booklog-book-lookup*.html`: English/Swedish external Open Library lookup tools.
 - `falling-kitten-how-to-play*.html`: paired Falling Kitten guides.
 - `brannball-guide.html`: Swedish BrännballCounter guide.
 - `*-privacy.html`, support and deletion pages: controlling public policy/support content. Do not broaden or translate legal claims without source evidence.
@@ -15,7 +15,7 @@ This directory is the static public site at `https://lukaspetersson.com/lp-apps/
 
 ## Editing conventions
 
-- Keep pages static and dependency-free. Use semantic HTML and the existing design tokens/classes.
+- Keep pages static and dependency-free. Use semantic HTML and the existing design tokens/classes. The BookLog lookup sends only the submitted query to Open Library, renders returned values as text, and must not save data locally.
 - Preserve exact app package IDs and first-party canonical URLs.
 - Localized guides need reciprocal `hreflang="en"`, `hreflang="sv-SE"`, `hreflang="pt-BR"` (BookLog) and `hreflang="x-default"`, self-canonicals and visible language links.
 - Play links may keep a campaign referrer, but attribution is never assumed. Swedish links use `hl=sv&gl=SE`.
