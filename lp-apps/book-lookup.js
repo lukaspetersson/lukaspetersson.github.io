@@ -5,10 +5,13 @@
   const status = document.querySelector('#lookup-status');
   const results = document.querySelector('#lookup-results');
   const cta = document.querySelector('#play-cta');
+  const portuguese = document.documentElement.lang.toLowerCase().startsWith('pt');
   const swedish = document.documentElement.lang.startsWith('sv');
-  const labels = swedish
-    ? { initial: 'Skriv en sökterm för att hitta böcker.', loading: 'Söker i Open Library…', empty: 'Inga böcker hittades. Prova en annan sökning.', error: 'Sökningen misslyckades. Kontrollera anslutningen och försök igen.', title: 'Titel', author: 'Författare', year: 'Första utgivningsår', source: 'Visa posten i Open Library' }
-    : { initial: 'Enter a search term to look up books.', loading: 'Searching Open Library…', empty: 'No books found. Try another search.', error: 'Search failed. Check your connection and try again.', title: 'Title', author: 'Author', year: 'First published', source: 'View record on Open Library' };
+  const labels = portuguese
+    ? { initial: 'Digite um termo para buscar livros.', loading: 'Buscando no Open Library…', empty: 'Nenhum livro encontrado. Tente outra busca.', error: 'Não foi possível fazer a busca. Verifique sua conexão e tente novamente.', title: 'Título', author: 'Autor(a)', year: 'Publicado pela primeira vez em', source: 'Ver registro no Open Library' }
+    : swedish
+      ? { initial: 'Skriv en sökterm för att hitta böcker.', loading: 'Söker i Open Library…', empty: 'Inga böcker hittades. Prova en annan sökning.', error: 'Sökningen misslyckades. Kontrollera anslutningen och försök igen.', title: 'Titel', author: 'Författare', year: 'Första utgivningsår', source: 'Visa posten i Open Library' }
+      : { initial: 'Enter a search term to look up books.', loading: 'Searching Open Library…', empty: 'No books found. Try another search.', error: 'Search failed. Check your connection and try again.', title: 'Title', author: 'Author', year: 'First published', source: 'View record on Open Library' };
 
   function clearResults() {
     results.replaceChildren();
