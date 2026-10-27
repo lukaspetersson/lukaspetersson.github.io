@@ -21,6 +21,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline
 .site-header { border-bottom: 1px solid var(--line); }
 .header-inner, main, .footer-inner { width: min(100% - 2rem, 70rem); margin-inline: auto; }
 .header-inner { display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem; padding: 1.25rem 0; }
+.header-inner nav { max-width: 100%; }
 .brand { color: var(--ink); font: 750 1.15rem/1.2 system-ui, sans-serif; text-decoration: none; }
 nav ul { display: flex; flex-wrap: wrap; gap: .5rem 1.15rem; list-style: none; padding: 0; margin: 0; }
 nav a { font: 600 .9rem/1.4 system-ui, sans-serif; }
@@ -49,7 +50,7 @@ code { background: #ebe2d6; padding: .1rem .3rem; }
 @media (max-width: 760px) { .header-inner { align-items: flex-start; flex-direction: column; } .cards { grid-template-columns: 1fr; } h1 { font-size: clamp(1.95rem, 9vw, 2.35rem); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
 
-.language-links { display: flex; gap: 1rem; margin: 1.5rem 0 2.25rem; font: 650 .92rem/1.4 system-ui, sans-serif; }
+.language-links { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2.25rem; font: 650 .92rem/1.4 system-ui, sans-serif; }
 .score-reference { border-collapse: collapse; width: 100%; font: .9rem/1.35 system-ui, sans-serif; }
 .score-reference th, .score-reference td { padding: .55rem .4rem; border-bottom: 1px solid var(--line); text-align: left; }
 @media (max-width: 440px) { .score-reference { font-size: .78rem; } .score-reference th, .score-reference td { padding-inline: .2rem; } }
