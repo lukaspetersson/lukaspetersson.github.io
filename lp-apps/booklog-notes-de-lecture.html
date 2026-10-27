@@ -148,16 +148,32 @@
         de date s’appellent <strong>Start date</strong> et <strong>Finish date</strong>.
       </p>
       <h2>Garder à l’esprit où sont enregistrées vos données</h2>
+      <p>L’exportation et la restauration JSON nécessitent BookLog 4.0.7. Ces commandes ne sont pas disponibles dans la version 4.0.4.</p>
       <p>
-        Dans BookLog 4.0.4, les livres, les notes, l’historique de recherche et les réglages sont principalement enregistrés sur l’appareil. L’ajout
-        manuel et la rédaction de notes ne nécessitent pas de compte. Effacer les données de l’application dans les paramètres Android ou désinstaller
-        BookLog supprime ces données locales : conservez séparément ce que vous souhaitez garder.
+        Dans BookLog 4.0.7, les livres et les notes restent enregistrés sur l’appareil. L’ajout manuel et la rédaction de notes ne nécessitent pas de
+        compte. Effacer les données de l’application dans les paramètres Android ou désinstaller BookLog supprime les données locales. L’exportation
+        est manuelle : elle ne crée pas de sauvegarde automatique et ne synchronise pas vos appareils.
       </p>
       <p>
-        La version actuelle ne propose pas de fonction générale permettant d’exporter ou de restaurer la bibliothèque et les notes. Le transfert vers
-        un autre appareil est également désactivé. L’importation facultative d’anciennes données cloud ne fait qu’importer ces données dans
-        l’application locale ; elle ne synchronise pas la bibliothèque actuelle et ne permet ni de l’exporter ni de la restaurer. Consultez l’avis de
-        confidentialité BookLog <a href="booklog-privacy.html">(en anglais)</a> et la page consacrée à la suppression du compte et des données
+        Pour conserver une copie de la bibliothèque et des notes, ouvrez <strong>Settings</strong>, puis <strong>Export shelf and notes</strong>.
+        L’interface reste en anglais. Le message d’avertissement précise que le fichier JSON contient vos notes privées. Avec
+        <strong>Choose location</strong>, choisissez où enregistrer le fichier dans le sélecteur Android. Toute personne ayant accès au fichier peut
+        lire son contenu ; le fournisseur de stockage choisi peut également avoir accès à ces données. Gardez cette copie dans un emplacement
+        approprié et attendez le message confirmant l’exportation avant d’effacer les données de l’application. Si l’exportation échoue, le
+        fournisseur peut avoir laissé un fichier incomplet : supprimez ce fichier.
+      </p>
+      <p>
+        Pour importer une copie exportée par BookLog, ouvrez <strong>Settings</strong>, puis <strong>Restore shelf and notes</strong>, et sélectionnez
+        le fichier JSON. L’application vérifie le fichier avant de proposer une restauration. Le dialogue indique le nombre de livres et
+        d’identifiants déjà présents. <strong>Restore missing</strong> ajoute seulement les identifiants absents : les livres et les notes portant un
+        identifiant déjà présent sur l’appareil restent inchangés. Deux livres ayant le même titre mais des identifiants différents restent deux
+        entrées distinctes. <strong>Cancel</strong> permet de ne pas lancer la restauration.
+      </p>
+      <p>
+        Les réglages d’affichage de la bibliothèque et les images de couverture conservées hors ligne ne sont pas inclus dans cette copie. Il ne
+        s’agit pas d’une sauvegarde complète des données de l’application. L’importation facultative d’anciennes données cloud reste une opération
+        distincte ; elle ne synchronise pas la bibliothèque locale actuelle. Consultez l’avis de confidentialité BookLog
+        <a href="booklog-privacy.html">(en anglais)</a> et la page consacrée à la suppression du compte et des données
         <a href="booklog-account-deletion.html">(en anglais)</a> pour plus de détails.
       </p>
       <p>BookLog ne propose pas de scanner de codes-barres, de minuteur de lecture, de statistiques ni de fonctionnalités sociales.</p>
