@@ -5,11 +5,14 @@ const path = require("node:path");
 
 const guidePath = path.join(__dirname, "..", "lp-apps", "booklog-reading-notes.html");
 const html = fs.readFileSync(guidePath, "utf8");
-const text = html.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+const text = html
+  .replace(/<[^>]*>/g, "")
+  .replace(/\s+/g, " ")
+  .trim();
 
 test("English guide explains verified shelf filtering and sorting before local-copy limits", () => {
-  const sectionStart = html.indexOf('<h2>4. Organize your shelf</h2>');
-  const localCopiesStart = html.indexOf('<h2>Keep local copies in mind</h2>');
+  const sectionStart = html.indexOf("<h2>4. Organize your shelf</h2>");
+  const localCopiesStart = html.indexOf("<h2>Keep local copies in mind</h2>");
   assert.ok(sectionStart >= 0 && sectionStart < localCopiesStart);
 
   for (const phrase of [
@@ -19,7 +22,8 @@ test("English guide explains verified shelf filtering and sorting before local-c
     "Title and Author are ascending; Rating, Pages and Start Date are descending.",
     "Pages is the book’s total page count, not a pages-read counter.",
     "The date fields in the book editor are labelled Start date and Finish date.",
-  ]) assert.ok(text.includes(phrase), `missing guide wording: ${phrase}`);
+  ])
+    assert.ok(text.includes(phrase), `missing guide wording: ${phrase}`);
 
   assert.match(html, /<strong>Settings<\/strong>.*?<strong>Filter<\/strong>/s);
   assert.match(html, /<strong>Start date<\/strong> and <strong>Finish date<\/strong>/);
