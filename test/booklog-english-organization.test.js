@@ -28,8 +28,8 @@ test("English guide explains verified shelf filtering and sorting before local-c
   assert.match(html, /<strong>Settings<\/strong>.*?<strong>Filter<\/strong>/s);
   assert.match(html, /<strong>Start date<\/strong> and <strong>Finish date<\/strong>/);
   assert.ok(text.includes("Keep local copies in mind"));
-  assert.ok(text.includes("has no built-in way to export or restore your local shelf and notes"));
-  assert.ok(text.includes("Android device transfer is also disabled"));
+  assert.ok(text.includes("open Settings and use “Export shelf and notes”"));
+  assert.ok(text.includes("Automatic Android device transfer remains disabled"));
   assert.equal((html.match(/rel="canonical"/g) || []).length, 1);
   assert.match(html, /<link rel="canonical" href="https:\/\/lukaspetersson\.com\/lp-apps\/booklog-reading-notes\.html"/);
 });

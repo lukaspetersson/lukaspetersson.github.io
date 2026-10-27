@@ -18,7 +18,7 @@ const siblings = [
 test("French guide preserves reviewed content, English UI labels and data boundaries", () => {
   const html = read(target);
   for (const phrase of [
-    "BookLog 4.0.4",
+    "BookLog 4.0.7",
     "interface actuelle de BookLog est en anglais",
     "Add a book",
     "Title",
@@ -38,11 +38,16 @@ test("French guide preserves reviewed content, English UI labels and data bounda
     "Finish date",
     "Open Library",
     "sans créer de compte",
-    "désinstaller BookLog supprime ces données locales",
-    "ne propose pas de fonction générale permettant d’exporter ou de restaurer",
-    "elle ne synchronise pas la bibliothèque actuelle",
+    "désinstaller BookLog supprime les données locales",
+    "Export shelf and notes",
+    "elle ne synchronise pas la bibliothèque locale actuelle",
     "ne propose pas de scanner de codes-barres",
     "hl=fr&amp;gl=FR",
+    "Restore shelf and notes",
+    "Restore missing",
+    "notes privées",
+    "identifiant déjà présent sur l’appareil restent inchangés",
+    "fichier incomplet",
   ])
     assert.ok(html.replace(/\s+/g, " ").includes(phrase), `missing ${phrase}`);
   assert.equal((html.match(/rel="canonical"/g) || []).length, 1);

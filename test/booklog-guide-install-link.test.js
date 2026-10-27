@@ -23,7 +23,7 @@ test("localized guides place one original Play link after disclosure and before 
     const firstHeading = html.search(/<h2\b/);
     assert.ok(linkAt < firstHeading, `${file}: link precedes instructions`);
     assert.ok(html.includes(label), `${file}: localized original label`);
-    assert.match(html, /4\.0\.4/);
+    assert.match(html, /4\.0\.7/);
     assert.match(html, /class="lede"/);
     assert.equal((html.match(/<h1\b/g) || []).length, 1);
     assert.equal((html.match(/<\/html>/g) || []).length, 1);

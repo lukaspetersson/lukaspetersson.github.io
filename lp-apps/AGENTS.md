@@ -31,6 +31,7 @@ Before publication:
 1. Parse every changed HTML/XML file and check all local relative links.
 2. Verify one self-canonical per page and reciprocal hreflang on locale pairs.
 3. Confirm Play package IDs, locale parameters and privacy/support links. Run `node --test test/booklog-book-lookup.test.js` from the repository root for the lookup pages; Spanish reading-guide coverage is `node --test test/booklog-spanish-guide.test.js` from the repository root. English reading-guide organization coverage is `node --test test/booklog-english-organization.test.js` from the repository root; French reading-guide coverage is `node --test test/booklog-french-guide.test.js` from the repository root.
+   - BookLog 4.0.7 version-scoped export/restore copy coverage: `node --test test/booklog-v13-lookup-copy.test.js` from the repository root.
    - Falling Kitten Spanish guide coverage: `node --test test/falling-spanish-guide.test.js` from the repository root.
 4. Check Open Graph/Twitter keys are unique and match title, description, canonical and image dimensions.
 5. Serve this directory locally with `python3 -m http.server 8795`, expose it through the platform preview tunnel, and inspect changed pages at desktop and mobile widths.
