@@ -5,7 +5,7 @@ This directory is the static public site at `https://lukaspetersson.com/lp-apps/
 ## Layout
 
 - `index.html` and `index-sv.html`: English and Swedish portfolio hubs.
-- `booklog-reading-notes*.html` and `booklog-diario-de-leitura.html`: English, Swedish and Brazilian Portuguese BookLog guides; `booklog-book-lookup*.html`: English/Swedish/Brazilian Portuguese external Open Library lookup tools.
+- `booklog-reading-notes*.html` and `booklog-diario-de-leitura.html`: English, Swedish and Brazilian Portuguese BookLog guides; `booklog-book-lookup*.html`: English/Swedish/Brazilian Portuguese/Spanish external Open Library lookup tools.
 - `falling-kitten-how-to-play*.html`: paired Falling Kitten guides.
 - `brannball-guide.html`: Swedish BrännballCounter guide.
 - `*-privacy.html`, support and deletion pages: controlling public policy/support content. Do not broaden or translate legal claims without source evidence.
@@ -17,8 +17,8 @@ This directory is the static public site at `https://lukaspetersson.com/lp-apps/
 
 - Keep pages static and dependency-free. Use semantic HTML and the existing design tokens/classes. The BookLog lookup sends only the submitted query to Open Library, renders returned values as text, and must not save data locally.
 - Preserve exact app package IDs and first-party canonical URLs.
-- Localized guides need reciprocal `hreflang="en"`, `hreflang="sv-SE"`, `hreflang="pt-BR"` (BookLog guides and lookup pages) and `hreflang="x-default"`, self-canonicals and visible language links.
-- Play links may keep a campaign referrer, but attribution is never assumed. Swedish links use `hl=sv&gl=SE`.
+- Localized guides need reciprocal `hreflang="en"`, `hreflang="sv-SE"`, `hreflang="pt-BR"` (BookLog guides and lookup pages) and `hreflang="x-default"`, plus `hreflang="es-ES"` for lookup pages, self-canonicals and visible language links.
+- Play links may keep a campaign referrer, but attribution is never assumed. Swedish links use `hl=sv&gl=SE`; Spanish lookup links use `hl=es&gl=ES` and must disclose that the app UI is English.
 - Use only verified product behavior. Do not claim goals, streaks, analytics, social features, cloud sync, barcode scanning, install growth or official sports rules unless current source evidence supports it.
 - Do not invent app screenshots. Clearly branded site artwork is acceptable when it is not presented as in-app UI.
 - Keep Open Graph and Twitter metadata aligned with each page's title, description, canonical URL and locale.
@@ -30,7 +30,7 @@ Before publication:
 
 1. Parse every changed HTML/XML file and check all local relative links.
 2. Verify one self-canonical per page and reciprocal hreflang on locale pairs.
-3. Confirm Play package IDs, locale parameters and privacy/support links.
+3. Confirm Play package IDs, locale parameters and privacy/support links. Run `node --test test/booklog-book-lookup.test.js` from the repository root; this focused test covers the four lookup pages and shared lookup script.
 4. Check Open Graph/Twitter keys are unique and match title, description, canonical and image dimensions.
 5. Serve this directory locally with `python3 -m http.server 8795`, expose it through the platform preview tunnel, and inspect changed pages at desktop and mobile widths.
 6. Run repository CI after publication, but distinguish deployment success from known repository-wide formatter or unrelated legacy link-check failures.
