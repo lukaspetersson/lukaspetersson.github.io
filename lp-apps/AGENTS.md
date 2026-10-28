@@ -33,6 +33,7 @@ Before publication:
 3. Confirm Play package IDs, locale parameters and privacy/support links. Run `node --test test/booklog-book-lookup.test.js` from the repository root for the lookup pages; Spanish reading-guide coverage is `node --test test/booklog-spanish-guide.test.js` from the repository root. English reading-guide organization coverage is `node --test test/booklog-english-organization.test.js` from the repository root; French reading-guide coverage is `node --test test/booklog-french-guide.test.js` from the repository root.
    - Printable reading-note card coverage: `node --test test/booklog-printable-note-card.test.js` from the repository root.
    - Portuguese printable reading-note card coverage: `node --test test/booklog-portuguese-print-card.test.js` from the repository root.
+   - Spanish printable reading-note card coverage: `node --test test/booklog-spanish-print-card.test.js` from the repository root.
    - BookLog 4.0.7 version-scoped export/restore copy coverage: `node --test test/booklog-v13-lookup-copy.test.js` from the repository root.
    - Falling Kitten Spanish guide coverage: `node --test test/falling-spanish-guide.test.js` from the repository root.
 4. Check Open Graph/Twitter keys are unique and match title, description, canonical and image dimensions.
@@ -42,7 +43,7 @@ Before publication:
 
 ## Publication
 
-The controlling source is the GitHub repository. In this environment use the GitHub REST API with `gh` and `GH_TOKEN='{{secret:github-token}}'`; never use git-over-HTTPS. Publish against a verified base commit with a non-force Git Data ref update, then verify the `Deploy site` GitHub Actions run and the custom-domain output.
+The controlling source is the GitHub repository. In this environment use the GitHub REST API with `gh` and the authorized GitHub credential in `GH_TOKEN`; never use git-over-HTTPS. Publish against a verified base commit with a non-force Git Data ref update, then verify the `Deploy site` GitHub Actions run and the custom-domain output.
 
 The `Deploy site` workflow filters HTML/CSS/JS/assets and does not run for a sitemap-only change. After such a commit, dispatch `deploy.yml` on `master` with `gh workflow run deploy.yml --repo lukaspetersson/lukaspetersson.github.io --ref master`, then verify the run and live sitemap. Do not dispatch while another deployment is in progress.
 
