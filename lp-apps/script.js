@@ -1,1 +1,1 @@
-document.querySelectorAll("[data-year]").forEach(e=>e.textContent=(new Date).getFullYear());
+document.querySelectorAll("[data-year]").forEach(t=>t.textContent=(new Date).getFullYear());const printNoteButton=document.querySelector(".print-note-button");printNoteButton&&printNoteButton.addEventListener("click",()=>{document.body.classList.add("printing-note-card");const t=()=>document.body.classList.remove("printing-note-card");window.addEventListener("afterprint",t,{once:!0});try{window.print()}catch(e){throw window.removeEventListener("afterprint",t),t(),e}});
