@@ -30,3 +30,10 @@ test("localized guides place one original Play link after disclosure and before 
     assert.match(html, /<\/html>\s*$/);
   }
 });
+
+test("homepage points readers to English and Portuguese printable-card guides without adding links", () => {
+  const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  assert.match(html, /<a href="booklog-reading-notes\.html">Reading notes guide and printable card<\/a>/);
+  assert.match(html, /<a href="booklog-diario-de-leitura\.html" lang="pt-BR">Diário de leitura e cartão para imprimir<\/a>/);
+  assert.equal((html.match(/<a\b/g) || []).length, 26);
+});
