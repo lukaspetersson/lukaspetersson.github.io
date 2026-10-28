@@ -34,6 +34,7 @@ Before publication:
    - Printable reading-note card coverage: `node --test test/booklog-printable-note-card.test.js` from the repository root.
    - Portuguese printable reading-note card coverage: `node --test test/booklog-portuguese-print-card.test.js` from the repository root.
    - Spanish printable reading-note card coverage: `node --test test/booklog-spanish-print-card.test.js` from the repository root.
+   - French printable reading-note card coverage: `node --test test/booklog-french-print-card.test.js` from the repository root.
    - BookLog 4.0.7 version-scoped export/restore copy coverage: `node --test test/booklog-v13-lookup-copy.test.js` from the repository root.
    - Falling Kitten Spanish guide coverage: `node --test test/falling-spanish-guide.test.js` from the repository root.
 4. Check Open Graph/Twitter keys are unique and match title, description, canonical and image dimensions.
