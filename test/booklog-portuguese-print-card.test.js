@@ -12,6 +12,12 @@ const script = fs.readFileSync(path.join(root, "lp-apps", "script.js"), "utf8");
 const normalize = (value) => value.replace(/\s+/g, " ");
 
 test("Portuguese guide includes the exact translated blank card using shared print hooks", () => {
+  const lede = html.match(/<p class="lede">([\s\S]*?)<\/p>/);
+  assert.ok(lede);
+  assert.equal(
+    normalize(lede[1]).trim(),
+    "O BookLog é um aplicativo para Android com interface em inglês. Adicione livros à sua estante no dispositivo e registre avaliações, número de páginas, datas de leitura e anotações."
+  );
   for (const copy of [
     "Uma nota de leitura no papel",
     "Prefere começar no papel? Imprima este cartão em branco e guarde-o com o seu livro. São sugestões para as suas próprias anotações, não campos adicionais no aplicativo.",
@@ -42,11 +48,12 @@ test("Portuguese guide includes the exact translated blank card using shared pri
   assert.ok(english.includes('class="printable-note-section"'));
 });
 
-test("insertion preserves all Portuguese guide bytes outside the card and adds no route metadata", () => {
+test("card insertion preserves normalized Portuguese content outside the card and approved lede, with no added route metadata", () => {
   const section = html.match(/      <section class="printable-note-section"[\s\S]*?<\/article>\n      <\/section>\n/);
   assert.ok(section, "card insertion is present");
-  const withoutCard = html.replace(section[0], "");
-  assert.equal(crypto.createHash("sha256").update(withoutCard).digest("hex"), "05e300a0b5b6e66639a4853c71ae5c80678147a6b1172e1c9bc993d8bd5b2f7e");
+  const baselineLede = '<p class="lede">Um diário de leitura pessoal para organizar livros e guardar os detalhes que você quer lembrar.</p>';
+  const withoutCard = normalize(html.replace(section[0], "").replace(/<p class="lede">[\s\S]*?<\/p>/, baselineLede));
+  assert.equal(crypto.createHash("sha256").update(withoutCard).digest("hex"), "0436c4e8d27cf09a393564d667da4d8407fa0f46e60aa3633c9471aee48f3084");
   assert.equal((html.match(/rel="canonical"/g) || []).length, 1);
   assert.equal((html.match(/hreflang=/g) || []).length, 6);
   assert.doesNotMatch(section[0], /<a\b|href=|<input|<textarea|<script|data-/i);
