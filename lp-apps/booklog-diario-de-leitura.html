@@ -34,6 +34,7 @@
     <link rel="alternate" hreflang="fr-FR" href="https://lukaspetersson.com/lp-apps/booklog-notes-de-lecture.html" />
     <link rel="alternate" hreflang="x-default" href="https://lukaspetersson.com/lp-apps/booklog-reading-notes.html" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="booklog-note-composer-1.0.0.css" />
   </head>
   <body>
     <header class="site-header">
@@ -70,6 +71,7 @@
       </p>
 
       <p><a href="booklog-book-lookup-pt-br.html">Buscar livros no Open Library antes de adicioná-los ao BookLog</a></p>
+      <p class="note-composer-jump" hidden>Quer começar aqui? <a href="#note-composer-heading">Prepare uma nota para copiar</a>.</p>
       <h2>Monte sua estante pessoal</h2>
       <p>
         Adicione livros manualmente à sua estante no dispositivo. Quando estiver online, pesquise no catálogo por título, autor ou ISBN, escolha um
@@ -139,6 +141,21 @@
           <footer class="print-note-footer">Notas de leitura do BookLog · lukaspetersson.com/lp-apps/booklog-diario-de-leitura.html</footer>
         </article>
       </section>
+      <section class="note-composer" aria-labelledby="note-composer-heading" hidden>
+        <h2 id="note-composer-heading">Prepare uma nota para copiar</h2>
+        <p>
+          Escreva suas próprias ideias aqui e copie a nota para colar manualmente no BookLog. A ferramenta apenas organiza o texto; não envia nem
+          salva suas anotações.
+        </p>
+        <label for="note-page">Página ou capítulo (opcional)</label
+        ><input id="note-page" name="page" type="text" maxlength="80" placeholder="Ex.: p. 42 ou capítulo 3" />
+        <label for="note-attention">O que chamou a minha atenção?</label><textarea id="note-attention" name="attention" maxlength="2000"></textarea>
+        <label for="note-return">O que quero retomar?</label><textarea id="note-return" name="return" maxlength="2000"></textarea>
+        <label for="note-preview">Nota pronta para copiar</label><textarea class="note-preview" id="note-preview" name="preview" readonly></textarea>
+        <button type="button" data-copy disabled>Copiar a nota</button><button type="button" data-clear>Limpar</button>
+        <p>Esta ferramenta não salva nem envia o texto. Copie a nota antes de fechar ou atualizar a página. Colar no BookLog é uma ação manual.</p>
+        <p aria-live="polite">Adicione uma ideia para preparar a nota.</p>
+      </section>
       <p>A exportação e a restauração de JSON exigem o BookLog 4.0.7. Esses controles não estão disponíveis na versão 4.0.4.</p>
       <p>
         No BookLog 4.0.7, os livros, as anotações, o histórico de busca e as configurações ficam principalmente no dispositivo. Limpar os dados do app
@@ -164,5 +181,7 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="booklog-note-format-pt.js"></script>
+    <script src="booklog-note-composer-pt.js"></script>
   </body>
 </html>
