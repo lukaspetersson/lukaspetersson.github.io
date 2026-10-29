@@ -118,8 +118,19 @@ test("a synchronous window.print error removes its listener and clears print sta
   assert.equal(classes.has("printing-note-card"), false);
 });
 
-test("existing guide identity, locale links, and product copy remain unchanged", () => {
-  assert.match(html, /<title>Start a reading note in BookLog — LP Apps<\/title>/);
+test("guide snippets describe the note tools while preserving locale links and product copy", () => {
+  const title = "BookLog reading notes and printable card — LP Apps";
+  const description = "Print a blank reading-note card or format your own ideas for copying. Learn to keep notes with books in BookLog for Android.";
+  assert.equal(html.match(/<title>([^<]+)<\/title>/)[1], title);
+  const metaTags = Array.from(html.matchAll(/<meta\b[^>]*>/g), (match) => match[0].replace(/\s+/g, " "));
+  for (const key of ["og:title", "twitter:title"]) {
+    const tag = metaTags.find((value) => value.includes(`="${key}"`));
+    assert.ok(tag && tag.includes(`content="${title}"`), `missing aligned title: ${key}`);
+  }
+  for (const key of ["description", "og:description", "twitter:description"]) {
+    const tag = metaTags.find((value) => value.includes(`="${key}"`));
+    assert.ok(tag && tag.includes(`content="${description}"`), `missing aligned description: ${key}`);
+  }
   assert.match(html, /<link rel="canonical" href="https:\/\/lukaspetersson\.com\/lp-apps\/booklog-reading-notes\.html" \/>/);
   for (const locale of ["en", "sv-SE", "pt-BR", "es-ES", "fr-FR", "x-default"]) assert.match(html, new RegExp(`hreflang="${locale}"`));
   for (const text of ["BookLog 4.0.7", "version 4.0.4", "JSON export and restore", "without creating an account"])
