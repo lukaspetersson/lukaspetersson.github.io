@@ -1,0 +1,1 @@
+!function(t){const o=function(){return{nextOrientation:t=>(t+1)%4,nextStartingAngle:t=>t>=3?1:t+1,isUpright:t=>t===0}}();"object"==typeof module&&module.exports?module.exports=o:t.FallingRotation=o}("object"==typeof globalThis?globalThis:this);
