@@ -24,6 +24,10 @@ This directory is the static public site at `https://lukaspetersson.com/lp-apps/
 - Keep Open Graph and Twitter metadata aligned with each page's title, description, canonical URL and locale.
 - Add every new public page to `sitemap.xml` and to an appropriate visible internal navigation path.
 
+## Cache-safe rotation practice
+
+The English guide uses a versioned relative stylesheet URL and only reveals the browser rotation practice when its loaded CSS exposes `--lp-rotation-ready: 1` on the practice section. Keep the static guide and Play link available if CSS is missing or stale; do not add polling, downloads, or storage/network behavior. Test the readiness gate in `test/falling-rotation.test.js`.
+
 ## Verification
 
 Before publication:
@@ -36,7 +40,7 @@ Before publication:
    - Spanish printable reading-note card coverage: `node --test test/booklog-spanish-print-card.test.js` from the repository root.
    - French printable reading-note card coverage: `node --test test/booklog-french-print-card.test.js` from the repository root.
    - BookLog 4.0.7 version-scoped export/restore copy coverage: `node --test test/booklog-v13-lookup-copy.test.js` from the repository root.
-   - Falling Kitten Spanish guide coverage: `node --test test/falling-spanish-guide.test.js` from the repository root.
+   - Falling Kitten English/Spanish guide and rotation coverage: `node --test test/falling-spanish-guide.test.js test/falling-rotation.test.js` from the repository root. The isolated rotation test covers quarter turns, alternate starts, upright classification, and no transition animation.
 4. Check Open Graph/Twitter keys are unique and match title, description, canonical and image dimensions.
 5. Serve this directory locally with `python3 -m http.server 8795`, expose it through the platform preview tunnel, and inspect changed pages at desktop and mobile widths.
 6. Run repository CI after publication, but distinguish deployment success from known repository-wide formatter or unrelated legacy link-check failures.
