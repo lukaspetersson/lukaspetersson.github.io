@@ -65,3 +65,7 @@ Run `node --test test/booklog-note-composer.test.js` from the repository root. T
 The Spanish guide's composer is an isolated, manual-copy aid. It formats only visitor-entered text, makes no network or storage calls, and does not paste automatically. Keep its CSS readiness gate, readonly selectable preview, limits, clear-focus behavior, and clipboard revision guard. The reusable `booklog-note-composer-1.0.0.css` is shared byte-for-byte with the English guide.
 
 Run `node --test test/booklog-spanish-note-composer.test.js test/booklog-spanish-guide.test.js test/booklog-spanish-print-card.test.js`; the preservation regression pins the pre-insertion Spanish guide baseline and must not read files outside the repository. Validate candidate JS with the deployed Uglifier 4.2.0 harmony parser; avoid optional chaining and bindingless `catch`.
+
+## Portuguese reading-note composer
+
+Portuguese guide composer is local-candidate only until reviewed. It shares `booklog-note-composer-1.0.0.css` byte-for-byte and must preserve the guide's pre-insertion content, manual copy-only behavior, no storage/network, selectable readonly fallback, CSS readiness gate, and print-only blank card. Run `node --test test/booklog-portuguese-note-composer.test.js test/booklog-portuguese-print-card.test.js` from candidate root.
