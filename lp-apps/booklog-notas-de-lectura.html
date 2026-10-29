@@ -1,30 +1,103 @@
 <!doctype html>
 <html lang="es-ES">
-<head>
-<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cómo guardar una nota de lectura en BookLog — LP Apps</title>
-<meta name="description" content="Guía práctica para añadir un libro, escribir una nota de lectura y volver a ella desde tu estantería en BookLog." />
-<meta property="og:type" content="website" /><meta property="og:site_name" content="LP Apps" /><meta property="og:locale" content="es_ES" />
-<meta property="og:url" content="https://lukaspetersson.com/lp-apps/booklog-notas-de-lectura.html" /><meta property="og:title" content="Cómo guardar una nota de lectura en BookLog — LP Apps" />
-<meta property="og:description" content="Guía práctica para añadir un libro, escribir una nota de lectura y volver a ella desde tu estantería en BookLog." />
-<meta property="og:image" content="https://lukaspetersson.com/lp-apps/social-booklog.png" /><meta property="og:image:width" content="3600" /><meta property="og:image:height" content="1890" /><meta property="og:image:alt" content="Guías y ayuda de LP Apps" />
-<meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Cómo guardar una nota de lectura en BookLog — LP Apps" /><meta name="twitter:description" content="Guía práctica para añadir un libro, escribir una nota de lectura y volver a ella desde tu estantería en BookLog." /><meta name="twitter:image" content="https://lukaspetersson.com/lp-apps/social-booklog.png" /><meta name="twitter:image:alt" content="Guías y ayuda de LP Apps" />
-<link rel="canonical" href="https://lukaspetersson.com/lp-apps/booklog-notas-de-lectura.html" />
-<link rel="alternate" hreflang="en" href="https://lukaspetersson.com/lp-apps/booklog-reading-notes.html" /><link rel="alternate" hreflang="sv-SE" href="https://lukaspetersson.com/lp-apps/booklog-reading-notes-sv.html" /><link rel="alternate" hreflang="pt-BR" href="https://lukaspetersson.com/lp-apps/booklog-diario-de-leitura.html" /><link rel="alternate" hreflang="es-ES" href="https://lukaspetersson.com/lp-apps/booklog-notas-de-lectura.html" /><link rel="alternate" hreflang="fr-FR" href="https://lukaspetersson.com/lp-apps/booklog-notes-de-lecture.html" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cómo guardar una nota de lectura en BookLog — LP Apps</title>
+    <meta
+      name="description"
+      content="Guía práctica para añadir un libro, escribir una nota de lectura y volver a ella desde tu estantería en BookLog."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LP Apps" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:url" content="https://lukaspetersson.com/lp-apps/booklog-notas-de-lectura.html" />
+    <meta property="og:title" content="Cómo guardar una nota de lectura en BookLog — LP Apps" />
+    <meta
+      property="og:description"
+      content="Guía práctica para añadir un libro, escribir una nota de lectura y volver a ella desde tu estantería en BookLog."
+    />
+    <meta property="og:image" content="https://lukaspetersson.com/lp-apps/social-booklog.png" />
+    <meta property="og:image:width" content="3600" />
+    <meta property="og:image:height" content="1890" />
+    <meta property="og:image:alt" content="Guías y ayuda de LP Apps" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cómo guardar una nota de lectura en BookLog — LP Apps" />
+    <meta
+      name="twitter:description"
+      content="Guía práctica para añadir un libro, escribir una nota de lectura y volver a ella desde tu estantería en BookLog."
+    />
+    <meta name="twitter:image" content="https://lukaspetersson.com/lp-apps/social-booklog.png" />
+    <meta name="twitter:image:alt" content="Guías y ayuda de LP Apps" />
+    <link rel="canonical" href="https://lukaspetersson.com/lp-apps/booklog-notas-de-lectura.html" />
+    <link rel="alternate" hreflang="en" href="https://lukaspetersson.com/lp-apps/booklog-reading-notes.html" />
+    <link rel="alternate" hreflang="sv-SE" href="https://lukaspetersson.com/lp-apps/booklog-reading-notes-sv.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://lukaspetersson.com/lp-apps/booklog-diario-de-leitura.html" />
+    <link rel="alternate" hreflang="es-ES" href="https://lukaspetersson.com/lp-apps/booklog-notas-de-lectura.html" />
+    <link rel="alternate" hreflang="fr-FR" href="https://lukaspetersson.com/lp-apps/booklog-notes-de-lecture.html" />
     <link rel="alternate" hreflang="x-default" href="https://lukaspetersson.com/lp-apps/booklog-reading-notes.html" />
-<link rel="stylesheet" href="styles.css" />
-</head><body>
-<header class="site-header"><div class="header-inner"><a class="brand" href="index.html">LP Apps</a><nav aria-label="Navegación"><ul><li><a href="index.html">Inicio (en inglés)</a></li><li><a href="booklog-privacy.html">Privacidad (en inglés)</a></li><li><a href="booklog-account-deletion.html">Eliminación de cuenta (en inglés)</a></li></ul></nav></div></header>
-<main class="prose"><div class="language-links" aria-label="Idioma"><a href="booklog-reading-notes.html" lang="en">English</a><a href="booklog-reading-notes-sv.html" lang="sv">Svenska</a><a href="booklog-diario-de-leitura.html" lang="pt-BR">Português (Brasil)</a><a href="booklog-notas-de-lectura.html" aria-current="page">Español</a>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="booklog-note-composer-1.0.0.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html">LP Apps</a>
+        <nav aria-label="Navegación">
+          <ul>
+            <li><a href="index.html">Inicio (en inglés)</a></li>
+            <li><a href="booklog-privacy.html">Privacidad (en inglés)</a></li>
+            <li><a href="booklog-account-deletion.html">Eliminación de cuenta (en inglés)</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="prose">
+      <div class="language-links" aria-label="Idioma">
+        <a href="booklog-reading-notes.html" lang="en">English</a><a href="booklog-reading-notes-sv.html" lang="sv">Svenska</a
+        ><a href="booklog-diario-de-leitura.html" lang="pt-BR">Português (Brasil)</a
+        ><a href="booklog-notas-de-lectura.html" aria-current="page">Español</a>
         <a href="booklog-notes-de-lecture.html" lang="fr-FR">Français</a>
       </div>
-<h1>Guarda una nota de lectura en BookLog</h1><p class="lede">En BookLog 4.0.7 puedes añadir un libro, escribir una nota y volver a leerla desde tu estantería. La interfaz de la aplicación está en inglés, también en dispositivos configurados en español.</p>
-      <p><a href="https://play.google.com/store/apps/details?id=com.lukas.android.booklog&amp;hl=es&amp;gl=ES&amp;referrer=utm_source%3Dlp_apps%26utm_medium%3Dreferral%26utm_campaign%3Dportfolio_2026">Descarga BookLog en Google Play</a></p>
-<p>¿Buscas primero un libro? Usa <a href="booklog-book-lookup-es.html">la búsqueda de libros de BookLog</a>.</p>
-<h2>1. Añade un libro y una primera nota</h2><p>Desde tu estantería, toca el botón <strong>+</strong>. En la pantalla <strong>Add a book</strong> (Añadir un libro), escribe el <strong>Title</strong> (título) y, si lo sabes, el <strong>Author</strong> (autor). Usa <strong>Add notes</strong> (añadir notas) para escribir tu idea y toca <strong>Save</strong> (guardar).</p>
-<p>No hace falta que la primera nota sea una reseña. Dos o tres frases pueden bastar: qué pasó, qué te llamó la atención y qué pregunta quieres llevarte al siguiente capítulo. Por ejemplo: «La narradora evita responder sobre la casa antigua. ¿Es prudencia o una pista de que la historia va a cambiar?»</p>
-<h2>Si buscas por ISBN</h2><p>El catálogo en línea de BookLog permite buscar escribiendo un título, autor o ISBN; no utiliza la cámara ni escanea códigos de barras. La búsqueda envía el texto consultado al catálogo externo Open Library; requiere conexión a Internet y los resultados pueden variar. El registro seleccionado puede aportar portada o número de páginas si dispone de esos datos; comprueba y corrige los detalles antes de guardar. Si no encuentras el libro, añádelo manualmente. La búsqueda web enlazada arriba no envía resultados a la aplicación.</p>
-<h2>2. Dale un propósito a la nota</h2><ul><li><strong>Recordar:</strong> anota con tus palabras una escena, idea, nombre o página.</li><li><strong>Preguntar:</strong> guarda algo que todavía no entiendes o quieres buscar después.</li><li><strong>Relacionar:</strong> conecta el pasaje con otro capítulo, libro o experiencia.</li><li><strong>Decidir:</strong> escribe si quieres continuar, pausar, recomendar o comentar el libro.</li></ul><p>Una nota concreta, como «el capítulo convierte la promesa en un problema», es más fácil de retomar que «interesante».</p>
+      <h1>Guarda una nota de lectura en BookLog</h1>
+      <p class="lede">
+        En BookLog 4.0.7 puedes añadir un libro, escribir una nota y volver a leerla desde tu estantería. La interfaz de la aplicación está en inglés,
+        también en dispositivos configurados en español.
+      </p>
+      <p>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.lukas.android.booklog&amp;hl=es&amp;gl=ES&amp;referrer=utm_source%3Dlp_apps%26utm_medium%3Dreferral%26utm_campaign%3Dportfolio_2026"
+          >Descarga BookLog en Google Play</a
+        >
+      </p>
+      <p>¿Buscas primero un libro? Usa <a href="booklog-book-lookup-es.html">la búsqueda de libros de BookLog</a>.</p>
+      <p class="note-composer-jump" hidden>¿Quieres empezar aquí? <a href="#note-composer-heading">Prepara una nota para pegar</a>.</p>
+      <h2>1. Añade un libro y una primera nota</h2>
+      <p>
+        Desde tu estantería, toca el botón <strong>+</strong>. En la pantalla <strong>Add a book</strong> (Añadir un libro), escribe el
+        <strong>Title</strong> (título) y, si lo sabes, el <strong>Author</strong> (autor). Usa <strong>Add notes</strong> (añadir notas) para
+        escribir tu idea y toca <strong>Save</strong> (guardar).
+      </p>
+      <p>
+        No hace falta que la primera nota sea una reseña. Dos o tres frases pueden bastar: qué pasó, qué te llamó la atención y qué pregunta quieres
+        llevarte al siguiente capítulo. Por ejemplo: «La narradora evita responder sobre la casa antigua. ¿Es prudencia o una pista de que la historia
+        va a cambiar?»
+      </p>
+      <h2>Si buscas por ISBN</h2>
+      <p>
+        El catálogo en línea de BookLog permite buscar escribiendo un título, autor o ISBN; no utiliza la cámara ni escanea códigos de barras. La
+        búsqueda envía el texto consultado al catálogo externo Open Library; requiere conexión a Internet y los resultados pueden variar. El registro
+        seleccionado puede aportar portada o número de páginas si dispone de esos datos; comprueba y corrige los detalles antes de guardar. Si no
+        encuentras el libro, añádelo manualmente. La búsqueda web enlazada arriba no envía resultados a la aplicación.
+      </p>
+      <h2>2. Dale un propósito a la nota</h2>
+      <ul>
+        <li><strong>Recordar:</strong> anota con tus palabras una escena, idea, nombre o página.</li>
+        <li><strong>Preguntar:</strong> guarda algo que todavía no entiendes o quieres buscar después.</li>
+        <li><strong>Relacionar:</strong> conecta el pasaje con otro capítulo, libro o experiencia.</li>
+        <li><strong>Decidir:</strong> escribe si quieres continuar, pausar, recomendar o comentar el libro.</li>
+      </ul>
+      <p>Una nota concreta, como «el capítulo convierte la promesa en un problema», es más fácil de retomar que «interesante».</p>
       <section class="printable-note-section" aria-labelledby="paper-note-heading">
         <h2 id="paper-note-heading">Una nota de lectura en papel</h2>
         <p>
@@ -71,7 +144,58 @@
           <footer class="print-note-footer">Notas de lectura de BookLog · lukaspetersson.com/lp-apps/booklog-notas-de-lectura.html</footer>
         </article>
       </section>
-<h2>3. Vuelve a la nota</h2><p>Al guardar, el libro aparece en tu estantería. Selecciona su fila para abrir los detalles y leer la nota junto al título y el autor. Antes de seguir leyendo, pregúntate: ¿qué observé?, ¿qué sigo preguntándome?, ¿en qué me fijaré ahora?</p><h2>4. Organiza tu estantería</h2><p>En <strong>Settings</strong> (ajustes), <strong>Filter</strong> (filtrar) permite elegir <strong>Show all</strong> (mostrar todos), <strong>To read</strong> (por leer), <strong>Reading</strong> (leyendo) o <strong>Finished</strong> (terminados). Estos estados se derivan de las fechas: sin <strong>Start date</strong> (fecha de inicio) es por leer; con inicio pero sin <strong>Finish date</strong> (fecha de finalización) es leyendo; con ambas fechas es terminado. <strong>Order by</strong> (ordenar por) ofrece <strong>Title</strong> (título), <strong>Author</strong> (autor), <strong>Rating</strong> (valoración), <strong>Pages</strong> (páginas del libro) y <strong>Start Date</strong> (fecha de inicio). «Pages» es el número total de páginas del libro, no un contador de páginas leídas.</p>
-<h2>Conserva tus datos y tus archivos por separado</h2>
-      <p>La exportación y la restauración de JSON requieren BookLog 4.0.7. Estos controles no están disponibles en la versión 4.0.4.</p><p>En BookLog 4.0.7, abre <strong>Settings</strong> (ajustes) y usa <strong>Export shelf and notes</strong> para guardar tu estantería y notas en un archivo JSON. <strong>Restore shelf and notes</strong> permite importar un archivo compatible de BookLog. Si un identificador ya existe en la estantería, se conserva el registro existente; no se combinan sus notas. El historial de búsqueda, los ajustes y los archivos de portada en caché no forman parte de esa exportación.</p><p>El archivo es texto sin cifrar: guárdalo en un lugar de confianza. Android puede ofrecer proveedores de almacenamiento externos; revisa sus condiciones. No hay sincronización continua ni transferencia automática entre dispositivos. Borrar los datos de la aplicación o desinstalarla elimina los datos locales; los archivos exportados se borran por separado en el lugar donde los guardaste. La importación opcional de datos heredados de la nube es solo de entrada, no una copia de seguridad de tu estantería actual. Consulta el <a href="booklog-privacy.html">aviso de privacidad (en inglés)</a> y la página de <a href="booklog-account-deletion.html">eliminación de cuenta y datos (en inglés)</a>.</p>
-</main><footer class="site-footer"><div class="footer-inner"><p>© <span data-year></span> Lukas Petersson · Sweden</p></div></footer><script src="script.js"></script></body></html>
+      <section class="note-composer" aria-labelledby="note-composer-heading" hidden>
+        <h2 id="note-composer-heading">Prepara una nota para pegar</h2>
+        <p>Escribe tus propias ideas. Esta herramienta solo las ordena para que puedas copiarlas y pegarlas tú en BookLog.</p>
+        <label for="note-page">Página o capítulo (opcional)</label><input id="note-page" name="page" type="text" maxlength="80" />
+        <label for="note-attention">¿Qué te llamó la atención?</label><textarea id="note-attention" name="attention" maxlength="2000"></textarea>
+        <label for="note-return">¿Qué quieres volver a leer?</label><textarea id="note-return" name="return" maxlength="2000"></textarea>
+        <label for="note-preview">Tu nota</label><textarea class="note-preview" id="note-preview" name="preview" readonly></textarea>
+        <button type="button" data-copy disabled>Copiar nota</button><button type="button" data-clear>Borrar</button>
+        <p>
+          Esta página no envía ni guarda lo que escribes. Copiar la nota es opcional; tendrás que pegarla tú en la app. La interfaz de BookLog está en
+          inglés.
+        </p>
+        <p aria-live="polite">Añade una idea para preparar la nota.</p>
+      </section>
+      <h2>3. Vuelve a la nota</h2>
+      <p>
+        Al guardar, el libro aparece en tu estantería. Selecciona su fila para abrir los detalles y leer la nota junto al título y el autor. Antes de
+        seguir leyendo, pregúntate: ¿qué observé?, ¿qué sigo preguntándome?, ¿en qué me fijaré ahora?
+      </p>
+      <h2>4. Organiza tu estantería</h2>
+      <p>
+        En <strong>Settings</strong> (ajustes), <strong>Filter</strong> (filtrar) permite elegir <strong>Show all</strong> (mostrar todos),
+        <strong>To read</strong> (por leer), <strong>Reading</strong> (leyendo) o <strong>Finished</strong> (terminados). Estos estados se derivan de
+        las fechas: sin <strong>Start date</strong> (fecha de inicio) es por leer; con inicio pero sin <strong>Finish date</strong> (fecha de
+        finalización) es leyendo; con ambas fechas es terminado. <strong>Order by</strong> (ordenar por) ofrece <strong>Title</strong> (título),
+        <strong>Author</strong> (autor), <strong>Rating</strong> (valoración), <strong>Pages</strong> (páginas del libro) y
+        <strong>Start Date</strong> (fecha de inicio). «Pages» es el número total de páginas del libro, no un contador de páginas leídas.
+      </p>
+      <h2>Conserva tus datos y tus archivos por separado</h2>
+      <p>La exportación y la restauración de JSON requieren BookLog 4.0.7. Estos controles no están disponibles en la versión 4.0.4.</p>
+      <p>
+        En BookLog 4.0.7, abre <strong>Settings</strong> (ajustes) y usa <strong>Export shelf and notes</strong> para guardar tu estantería y notas en
+        un archivo JSON. <strong>Restore shelf and notes</strong> permite importar un archivo compatible de BookLog. Si un identificador ya existe en
+        la estantería, se conserva el registro existente; no se combinan sus notas. El historial de búsqueda, los ajustes y los archivos de portada en
+        caché no forman parte de esa exportación.
+      </p>
+      <p>
+        El archivo es texto sin cifrar: guárdalo en un lugar de confianza. Android puede ofrecer proveedores de almacenamiento externos; revisa sus
+        condiciones. No hay sincronización continua ni transferencia automática entre dispositivos. Borrar los datos de la aplicación o desinstalarla
+        elimina los datos locales; los archivos exportados se borran por separado en el lugar donde los guardaste. La importación opcional de datos
+        heredados de la nube es solo de entrada, no una copia de seguridad de tu estantería actual. Consulta el
+        <a href="booklog-privacy.html">aviso de privacidad (en inglés)</a> y la página de
+        <a href="booklog-account-deletion.html">eliminación de cuenta y datos (en inglés)</a>.
+      </p>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© <span data-year></span> Lukas Petersson · Sweden</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="booklog-note-format-es.js"></script>
+    <script src="booklog-note-composer-es.js"></script>
+  </body>
+</html>
