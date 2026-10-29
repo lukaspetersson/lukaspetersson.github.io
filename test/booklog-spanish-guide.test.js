@@ -49,7 +49,7 @@ test("Spanish reading guide explains verified workflow and data limits", () => {
     assert.ok(html.includes(text), `missing ${text}`);
   assert.match(html, /número total de páginas del libro, no un contador de páginas leídas/);
   assert.match(html, /sin <strong>Start date<\/strong>[^<]* es por leer/);
-  assert.match(html, /con inicio pero sin <strong>Finish date<\/strong> \(fecha de finalización\) es leyendo/);
+  assert.match(html, /con inicio pero sin <strong>Finish date<\/strong> \(fecha de\s*finalización\) es leyendo/);
   assert.match(html, /con ambas fechas es terminado/);
 });
 

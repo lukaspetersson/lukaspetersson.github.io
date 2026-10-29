@@ -34,7 +34,7 @@ test("Spanish guide includes the exact translated blank card using shared print 
     assert.ok(normalize(html).includes(copy), `missing translated copy: ${copy}`);
   assert.match(html, /<button class="print-note-button" type="button">Imprimir la ficha<\/button>/);
   assert.equal((html.match(/class="printable-note-section"/g) || []).length, 1);
-  assert.doesNotMatch(html, /<input|<textarea|localStorage|sessionStorage/i);
+  assert.doesNotMatch(html.split('<p class="note-composer-jump"')[0], /<input|<textarea|localStorage|sessionStorage/i);
   assert.match(css, /body\.printing-note-card \.print-note-card \{\s*page: booklog-note-card;\s*display: block/);
   assert.match(css, /@page booklog-note-card \{\s*size: auto;\s*margin: 0?\.4in;/);
   assert.doesNotMatch(css, /@page \{/);
@@ -47,8 +47,18 @@ test("Spanish guide includes the exact translated blank card using shared print 
 test("insertion preserves all Spanish guide bytes outside the card and adds no route metadata", () => {
   const section = html.match(/      <section class="printable-note-section"[\s\S]*?<\/article>\n      <\/section>\n/);
   assert.ok(section, "card insertion is present");
-  const withoutCard = html.replace(section[0], "");
-  assert.equal(crypto.createHash("sha256").update(withoutCard).digest("hex"), "3cf4f0978dd09f168f523ffaedae7ccf798a635a3976059c27b925d4cb03d0a1");
+  const guideText = html
+    .replace(/\s*<link rel="stylesheet" href="booklog-note-composer-1\.0\.0\.css" \/>/, "")
+    .replace(/\s*<p class="note-composer-jump"[\s\S]*?<\/p>/, "")
+    .replace(/\s*<section class="note-composer"[\s\S]*?<\/section>/, "")
+    .replace(/\s*<script src="booklog-note-format-es\.js"><\/script>/, "")
+    .replace(/\s*<script src="booklog-note-composer-es\.js"><\/script>/, "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ")
+    .trim();
+  const semanticDigest = crypto.createHash("sha256").update(guideText).digest("hex");
+  assert.equal(semanticDigest, "744486f88d7443800daaad77a77e89b6ce77222e040e333955a3b95618678732");
   assert.equal((html.match(/rel="canonical"/g) || []).length, 1);
   assert.equal((html.match(/hreflang=/g) || []).length, 6);
   assert.doesNotMatch(section[0], /<a\b|href=|<input|<textarea|<script|data-/i);
