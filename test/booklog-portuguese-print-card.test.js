@@ -5,6 +5,7 @@ const path = require("node:path");
 const crypto = require("node:crypto");
 
 const root = path.join(__dirname, "..");
+const removeApprovedGermanLinks = require("./booklog-german-delta");
 const html = fs.readFileSync(path.join(root, "lp-apps", "booklog-diario-de-leitura.html"), "utf8");
 const english = fs.readFileSync(path.join(root, "lp-apps", "booklog-reading-notes.html"), "utf8");
 const css = fs.readFileSync(path.join(root, "lp-apps", "styles.css"), "utf8");
@@ -59,12 +60,12 @@ test("card insertion preserves normalized Portuguese content outside the card an
   assert.ok(section, "card insertion is present");
   const baselineLede = '<p class="lede">Um diário de leitura pessoal para organizar livros e guardar os detalhes que você quer lembrar.</p>';
   const withoutCard = normalize(
-    withoutComposer(html)
+    removeApprovedGermanLinks(withoutComposer(html))
       .replace(section[0], "")
       .replace(/<p class="lede">[\s\S]*?<\/p>/, baselineLede)
   );
   assert.equal(crypto.createHash("sha256").update(withoutCard).digest("hex"), "0436c4e8d27cf09a393564d667da4d8407fa0f46e60aa3633c9471aee48f3084");
   assert.equal((html.match(/rel="canonical"/g) || []).length, 1);
-  assert.equal((html.match(/hreflang=/g) || []).length, 6);
+  assert.equal((removeApprovedGermanLinks(html).match(/hreflang=/g) || []).length, 6);
   assert.doesNotMatch(section[0], /<a\b|href=|<input|<textarea|<script|data-/i);
 });

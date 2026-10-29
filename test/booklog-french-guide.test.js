@@ -75,12 +75,15 @@ test("French hreflang is reciprocal and visible without changing sibling content
   }
 });
 
-test("only the French guide URL is newly added to sitemap", () => {
+test("French and approved German guide URLs are listed once in sitemap", () => {
   const xml = read("sitemap.xml");
   assert.equal((xml.match(new RegExp(`<loc>${canonical.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc>`, "g")) || []).length, 1);
   const locations = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-  assert.equal(locations.length, 15);
-  assert.equal(new Set(locations).size, 15);
+  const german = "https://lukaspetersson.com/lp-apps/booklog-lesetagebuch.html";
+  assert.equal(locations.filter((location) => location === german).length, 1);
+  assert.equal(locations.length, 16);
+  assert.equal(new Set(locations).size, 16);
+  assert.match(xml, /<loc>https:\/\/lukaspetersson\.com\/lp-apps\/booklog-lesetagebuch\.html<\/loc>\s*<lastmod>2026-10-29<\/lastmod>/);
 });
 
 const guides = [

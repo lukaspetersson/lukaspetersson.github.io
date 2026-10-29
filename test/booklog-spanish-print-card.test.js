@@ -5,6 +5,7 @@ const path = require("node:path");
 const crypto = require("node:crypto");
 
 const root = path.join(__dirname, "..");
+const removeApprovedGermanLinks = require("./booklog-german-delta");
 const html = fs.readFileSync(path.join(root, "lp-apps", "booklog-notas-de-lectura.html"), "utf8");
 const english = fs.readFileSync(path.join(root, "lp-apps", "booklog-reading-notes.html"), "utf8");
 const css = fs.readFileSync(path.join(root, "lp-apps", "styles.css"), "utf8");
@@ -47,7 +48,7 @@ test("Spanish guide includes the exact translated blank card using shared print 
 test("insertion preserves all Spanish guide bytes outside the card and adds no route metadata", () => {
   const section = html.match(/      <section class="printable-note-section"[\s\S]*?<\/article>\n      <\/section>\n/);
   assert.ok(section, "card insertion is present");
-  const guideText = html
+  const guideText = removeApprovedGermanLinks(html)
     .replace(/\s*<link rel="stylesheet" href="booklog-note-composer-1\.0\.0\.css" \/>/, "")
     .replace(/\s*<p class="note-composer-jump"[\s\S]*?<\/p>/, "")
     .replace(/\s*<section class="note-composer"[\s\S]*?<\/section>/, "")
@@ -60,7 +61,7 @@ test("insertion preserves all Spanish guide bytes outside the card and adds no r
   const semanticDigest = crypto.createHash("sha256").update(guideText).digest("hex");
   assert.equal(semanticDigest, "744486f88d7443800daaad77a77e89b6ce77222e040e333955a3b95618678732");
   assert.equal((html.match(/rel="canonical"/g) || []).length, 1);
-  assert.equal((html.match(/hreflang=/g) || []).length, 6);
+  assert.equal((removeApprovedGermanLinks(html).match(/hreflang=/g) || []).length, 6);
   assert.doesNotMatch(section[0], /<a\b|href=|<input|<textarea|<script|data-/i);
 });
 

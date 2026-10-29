@@ -1,0 +1,55 @@
+{
+  "lang": "de",
+  "path": "booklog-lesetagebuch.html",
+  "title": "BookLog als Lesetagebuch: Eigene Buchnotizen auf Android",
+  "description": "Beginne eine eigene Buchnotiz in BookLog. Deutscher Leitfaden zur englischen Android-App, mit einer druckbaren Notizkarte und Hinweisen zur lokalen Sicherung.",
+  "h1": "Eine Buchnotiz in BookLog beginnen",
+  "lede": "Ein Buch, eine Beobachtung, eine Frage für das nächste Kapitel: Mit BookLog kannst du diese Dinge zusammen aufbewahren. Dieser Leitfaden zeigt, wie du einen Bucheintrag anlegst, eine eigene Notiz speicherst und später wiederfindest — ohne ein Konto anzulegen.",
+  "interface_warning": "Die App-Oberfläche ist auf Englisch. Dieser Leitfaden ist auf Deutsch. BookLog ist ein Lesetagebuch für eigene Einträge, kein E-Book- oder PDF-Reader.",
+  "cta": "BookLog bei Google Play ansehen",
+  "lookup": "Suchst du zuerst ein Buch? Die englischsprachige BookLog-Buchsuche im Browser kann dir beim Nachschlagen helfen. Ergebnisse werden nicht in die App übertragen; einen passenden Eintrag übernimmst du selbst.",
+  "sections": [
+    {
+      "heading": "1. Einen Bucheintrag anlegen",
+      "paragraphs": [
+        "Tippe im Bücherregal auf das Pluszeichen. Trage den Titel und, wenn du ihn kennst, den Autor ein. Öffne den Notizbereich für deinen ersten Gedanken und speichere den Eintrag, wenn du fertig bist.",
+        "Du kannst ein Buch auch über den Online-Katalog suchen, etwa mit Titel, Autor oder ISBN. Dafür ist eine Internetverbindung nötig. Titelbild und Seitenzahl hängen vom gefundenen Datensatz ab und können fehlen. Prüfe die Angaben vor dem Speichern; ohne passenden Treffer kannst du das Buch manuell eintragen."
+      ]
+    },
+    {
+      "heading": "2. Der Notiz eine konkrete Aufgabe geben",
+      "paragraphs": [
+        "Halte eine Beobachtung in deinen eigenen Worten fest und ergänze eine Frage, die du beim Weiterlesen verfolgen möchtest. Eine Seiten- oder Kapitelangabe im Notiztext hilft dir später, die Stelle wiederzufinden. Sie ist kein zusätzlicher Seitenfortschrittszähler der App.",
+        "Ein erfundenes Beispiel: „Die Erzählerin weicht der Frage nach dem alten Haus aus. Schützt sie jemanden, oder wird hier ein späterer Konflikt vorbereitet?“ Das ist konkreter als „interessantes Kapitel“, ohne schon eine vollständige Rezension zu verlangen.",
+        "Zum Bucheintrag gehören auch eine Bewertung, die Gesamtseitenzahl des Buchs sowie Beginn- und Abschlussdatum. Die Gesamtseitenzahl zählt nicht deine gelesenen Seiten. Notiere nur, was für dich hilfreich ist; eine Notiz muss keine Zusammenfassung des ganzen Buchs sein."
+      ]
+    },
+    {
+      "heading": "3. Den Gedanken wiederfinden",
+      "paragraphs": [
+        "Nach dem Speichern steht das Buch in deinem Bücherregal. Wähle seine Zeile, um die Detailansicht mit Titel, Autor und Notiz zu öffnen. Lies die Notiz vor dem nächsten Kapitel noch einmal: Was wolltest du beachten, und ist die Frage inzwischen beantwortet?"
+      ]
+    }
+  ],
+  "paper": {
+    "heading": "Eine Buchnotiz auf Papier",
+    "intro": "Drucke diese leere Karte und lege sie ins Buch, wenn du lieber auf Papier beginnst. Die Felder sind Schreibanregungen auf dieser Website, keine zusätzlichen App-Felder.",
+    "button": "Notizkarte drucken",
+    "card_title": "Meine Buchnotiz",
+    "fields": ["Buchtitel", "Autor", "Ausgabe", "Seite oder Kapitel", "Datum"],
+    "prompts": ["Was ist mir aufgefallen?", "Was möchte ich wiederfinden?"],
+    "footer": "BookLog · lukaspetersson.com/lp-apps/booklog-lesetagebuch.html"
+  },
+  "backup": {
+    "heading": "Notizen aufbewahren und das Gerät wechseln",
+    "paragraphs": [
+      "Bucheinträge, Notizen, Suchverlauf und Einstellungen liegen in BookLog 4.0.7 hauptsächlich auf dem Gerät. Wenn du die App deinstallierst oder ihre Daten in den Android-Einstellungen löschst, gehen diese lokalen App-Daten verloren. Bewahre wichtige Notizen zusätzlich außerhalb der App auf.",
+      "JSON-Export und Wiederherstellung benötigen BookLog 4.0.7; in Version 4.0.4 gibt es diese Funktionen nicht. Öffne in 4.0.7 „Settings“ und wähle „Export shelf and notes“, um eine JSON-Datei zu speichern. Übertrage die Datei selbst auf das andere Gerät und wähle dort „Restore shelf and notes“.",
+      "Die Wiederherstellung fügt Einträge hinzu, deren IDs noch nicht auf dem Gerät vorhanden sind, und lässt Einträge mit bereits vorhandenen IDs unverändert. Sie gleicht nicht nach Buchtitel ab und führt Notizen nicht zusammen. Anzeigeeinstellungen des Bücherregals und offline gespeicherte Titelbilder sind nicht enthalten.",
+      "Die exportierte Datei enthält private Notizen als unverschlüsselten Klartext. Halte sie privat, wähle ihren Speicherort bewusst und lösche exportierte Dateien separat, wenn du sie nicht mehr brauchst. Die automatische Android-Geräteübertragung ist deaktiviert. Ein optionaler Import aus dem alten Cloud-System ist keine laufende Synchronisierung."
+    ],
+    "privacy_link": "Datenschutzhinweise zu BookLog (Englisch)",
+    "deletion_link": "Lokale Daten und alte Kontodaten löschen (Englisch)"
+  },
+  "constraints": "No new native fields, UI translations, composer, lookup controller, account, analytics, automatic import, sync, encryption or backup guarantee. Only quoted native labels Settings / Export shelf and notes / Restore shelf and notes. Preserve existing guide family and reciprocal German language links/hreflang only after accepted hotfix and fresh baseline. Use existing coarse portfolio referral URL unchanged."
+}

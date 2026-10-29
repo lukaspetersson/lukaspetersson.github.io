@@ -4,6 +4,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const crypto = require("node:crypto");
 const vm = require("node:vm");
+const removeApprovedGermanLinks = require("./booklog-german-delta");
 const { formatNotePt } = require("../lp-apps/booklog-note-format-pt.js");
 const read = (name) => fs.readFileSync(path.join(__dirname, "../lp-apps", name), "utf8");
 test("Portuguese output preserves entered newlines and applies limits", () => {
@@ -23,7 +24,7 @@ test("guide insertion preserves every byte of the prior guide outside inserted c
   const baselineBytes = fs.readFileSync(path.join(__dirname, "booklog-portuguese-guide-baseline.html"));
   assert.equal(crypto.createHash("sha256").update(baselineBytes).digest("hex"), "de699255e857fa909728659b526b9726516bba182a0fa6f533c039657b125c85");
   const baseline = baselineBytes.toString("utf8");
-  const actual = read("booklog-diario-de-leitura.html")
+  const actual = removeApprovedGermanLinks(read("booklog-diario-de-leitura.html"))
     .replace('    <link rel="stylesheet" href="booklog-note-composer-1.0.0.css" />\n', "")
     .replace(/      <p class="note-composer-jump" hidden>[\s\S]*?<\/p>\n/, "")
     .replace(/      <section class="note-composer"[\s\S]*?<\/section>\n/, "")
