@@ -53,7 +53,3 @@ The controlling source is the GitHub repository. In this environment use the Git
 The `Deploy site` workflow filters HTML/CSS/JS/assets and does not run for a sitemap-only change. After such a commit, dispatch `deploy.yml` on `master` with `gh workflow run deploy.yml --repo lukaspetersson/lukaspetersson.github.io --ref master`, then verify the run and live sitemap. Do not dispatch while another deployment is in progress.
 
 Keep local test reports, screenshots and operational receipts outside the public repository under `~/lp-apps/`; do not commit generated audit bulk.
-
-## Isolated note-composer candidate
-
-Run the copied suite from the candidate root with `node --test test/*.test.js`. Serve `lp-apps` locally with `python3 -m http.server 8878` for the visual review; this candidate is preparation-only and must not be published without owner review.

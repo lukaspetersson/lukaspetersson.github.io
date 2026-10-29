@@ -31,8 +31,7 @@ test("guide contains the complete blank paper card and precise print-only afford
   ])
     assert.ok(normalizedHtml.includes(content), `missing card copy: ${content}`);
   assert.match(html, /<button class="print-note-button" type="button">/);
-  assert.match(html, /<section class="note-composer"[^>]* hidden>/);
-  assert.match(html, /booklog-note-composer-1\.0\.0\.js/);
+  assert.doesNotMatch(html, /<input|<textarea|localStorage|sessionStorage/i);
   assert.match(css, /@media print\s*\{[\s\S]*body\.printing-note-card/);
   assert.match(css, /body\.printing-note-card > \* \{\s*display: none/);
   assert.match(css, /body\.printing-note-card > main\.prose \{\s*page: booklog-note-card;/);
