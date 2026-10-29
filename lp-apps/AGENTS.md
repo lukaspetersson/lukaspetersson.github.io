@@ -53,3 +53,9 @@ The controlling source is the GitHub repository. In this environment use the Git
 The `Deploy site` workflow filters HTML/CSS/JS/assets and does not run for a sitemap-only change. After such a commit, dispatch `deploy.yml` on `master` with `gh workflow run deploy.yml --repo lukaspetersson/lukaspetersson.github.io --ref master`, then verify the run and live sitemap. Do not dispatch while another deployment is in progress.
 
 Keep local test reports, screenshots and operational receipts outside the public repository under `~/lp-apps/`; do not commit generated audit bulk.
+
+## Reading-note composer
+
+The English guide's composer formats only the visitor's own text for manual clipboard copying and pasting into BookLog. It must not save or send that text. Preserve the CSS readiness gate, the selectable fallback for blocked copying, and the guard against stale clipboard completion after editing or clearing.
+
+Run `node --test test/booklog-note-composer.test.js` from the repository root. The deployed Uglifier 4.2.0 harmony parser does not support optional chaining or bindingless `catch`; avoid both and verify the actual deployment build before treating a change as live.

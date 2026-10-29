@@ -4,20 +4,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Start a reading note in BookLog — LP Apps</title>
-    <meta name="description" content="A practical BookLog guide for adding a book, writing a first reading note, and returning to it from your bookshelf." />
+    <meta
+      name="description"
+      content="A practical BookLog guide for adding a book, writing a first reading note, and returning to it from your bookshelf."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="LP Apps" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="https://lukaspetersson.com/lp-apps/booklog-reading-notes.html" />
     <meta property="og:title" content="Start a reading note in BookLog — LP Apps" />
-    <meta property="og:description" content="A practical BookLog guide for adding a book, writing a first reading note, and returning to it from your bookshelf." />
+    <meta
+      property="og:description"
+      content="A practical BookLog guide for adding a book, writing a first reading note, and returning to it from your bookshelf."
+    />
     <meta property="og:image" content="https://lukaspetersson.com/lp-apps/social-booklog.png" />
     <meta property="og:image:width" content="3600" />
     <meta property="og:image:height" content="1890" />
     <meta property="og:image:alt" content="LP Apps Android app guides and support" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Start a reading note in BookLog — LP Apps" />
-    <meta name="twitter:description" content="A practical BookLog guide for adding a book, writing a first reading note, and returning to it from your bookshelf." />
+    <meta
+      name="twitter:description"
+      content="A practical BookLog guide for adding a book, writing a first reading note, and returning to it from your bookshelf."
+    />
     <meta name="twitter:image" content="https://lukaspetersson.com/lp-apps/social-booklog.png" />
     <meta name="twitter:image:alt" content="LP Apps Android app guides and support" />
     <link rel="canonical" href="https://lukaspetersson.com/lp-apps/booklog-reading-notes.html" />
@@ -28,6 +37,7 @@
     <link rel="alternate" hreflang="fr-FR" href="https://lukaspetersson.com/lp-apps/booklog-notes-de-lecture.html" />
     <link rel="alternate" hreflang="x-default" href="https://lukaspetersson.com/lp-apps/booklog-reading-notes.html" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="booklog-note-composer-1.0.0.css" />
   </head>
   <body>
     <header class="site-header">
@@ -48,25 +58,47 @@
         <a href="booklog-reading-notes-sv.html" lang="sv">Svenska</a>
         <a href="booklog-diario-de-leitura.html" lang="pt-BR">Português (Brasil)</a>
         <a href="booklog-notas-de-lectura.html" lang="es-ES">Español</a>
-      
+
         <a href="booklog-notes-de-lecture.html" lang="fr-FR">Français</a>
       </div>
       <h1>Start a reading note in BookLog</h1>
-      <p class="lede">Keep a book and the thought you want to return to together. In BookLog 4.0.7, you can add a title, write a first note, and read it again from your bookshelf without creating an account. This guide walks through those first steps.</p>
-      <p><a href="https://play.google.com/store/apps/details?id=com.lukas.android.booklog&amp;referrer=utm_source%3Dlp_apps%26utm_medium%3Dreferral%26utm_campaign%3Dportfolio_2026">Get BookLog on Google Play</a></p>
-      
+      <p class="lede">
+        Keep a book and the thought you want to return to together. In BookLog 4.0.7, you can add a title, write a first note, and read it again from
+        your bookshelf without creating an account. This guide walks through those first steps.
+      </p>
+      <p>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.lukas.android.booklog&amp;referrer=utm_source%3Dlp_apps%26utm_medium%3Dreferral%26utm_campaign%3Dportfolio_2026"
+          >Get BookLog on Google Play</a
+        >
+      </p>
 
       <p>Looking for a book first? Try the <a href="booklog-book-lookup.html">BookLog book lookup</a>.</p>
+      <p class="note-composer-jump" hidden>Want to start here? <a href="#note-composer-heading">Make a note to paste into BookLog</a>.</p>
 
       <h2>1. Begin with one book and one moment</h2>
-      <p>From your bookshelf, tap the <strong>+</strong> button. The next screen is headed <strong>Add a book</strong>. Enter a <strong>Title</strong>. Add the <strong>Author</strong> if you know it, then use <strong>Add notes</strong> for the thought you have now. Choose <strong>Save</strong> when you are ready to put the book on your bookshelf.</p>
-      <p>You do not need to turn the first note into a review. A useful starting point is often only two or three sentences: what happened, what caught your attention, and a question you want to carry into the next chapter. Writing while the detail is still fresh is more useful than trying to recreate it later.</p>
+      <p>
+        From your bookshelf, tap the <strong>+</strong> button. The next screen is headed <strong>Add a book</strong>. Enter a <strong>Title</strong>.
+        Add the <strong>Author</strong> if you know it, then use <strong>Add notes</strong> for the thought you have now. Choose
+        <strong>Save</strong> when you are ready to put the book on your bookshelf.
+      </p>
+      <p>
+        You do not need to turn the first note into a review. A useful starting point is often only two or three sentences: what happened, what caught
+        your attention, and a question you want to carry into the next chapter. Writing while the detail is still fresh is more useful than trying to
+        recreate it later.
+      </p>
       <p>For example, instead of “good chapter,” try a short note such as:</p>
-      <blockquote><p>The narrator avoids answering the question about the old house. Is that caution, or a clue that the story is changing direction?</p></blockquote>
+      <blockquote>
+        <p>The narrator avoids answering the question about the old house. Is that caution, or a clue that the story is changing direction?</p>
+      </blockquote>
       <p>That gives future-you something specific to notice when you return.</p>
 
       <h2>If you search by ISBN</h2>
-      <p>BookLog’s online catalog can fill in a cover and page count when the selected record includes them. If either is missing, you’ll see a placeholder cover or a blank page field; check the book details and edit them before saving. No matching result? Try a title or author search, or add the book manually. Catalog search needs an internet connection. The browser lookup linked above does not send results into the app.</p>
+      <p>
+        BookLog’s online catalog can fill in a cover and page count when the selected record includes them. If either is missing, you’ll see a
+        placeholder cover or a blank page field; check the book details and edit them before saving. No matching result? Try a title or author search,
+        or add the book manually. Catalog search needs an internet connection. The browser lookup linked above does not send results into the app.
+      </p>
 
       <h2>2. Give the note a small job</h2>
       <p>A note is easier to reuse when it has a purpose. Pick one of these for each entry:</p>
@@ -76,12 +108,16 @@
         <li><strong>Connect:</strong> link the passage to an earlier chapter, another book, or your own experience.</li>
         <li><strong>Decide:</strong> write whether you want to continue, pause, recommend, or discuss the book.</li>
       </ul>
-      <p>Keep the note concrete. “The chapter turns the promise into a problem” is easier to revisit than “interesting.” If you quote a book, add just enough context to know why you saved it, and respect the book’s copyright when sharing material elsewhere.</p>
+      <p>
+        Keep the note concrete. “The chapter turns the promise into a problem” is easier to revisit than “interesting.” If you quote a book, add just
+        enough context to know why you saved it, and respect the book’s copyright when sharing material elsewhere.
+      </p>
 
       <section class="printable-note-section" aria-labelledby="paper-note-heading">
         <h2 id="paper-note-heading">A reading note on paper</h2>
         <p>
-          Prefer to start on paper? Print this blank card and keep it with your book. These are prompts for your own notes, not extra fields in the app.
+          Prefer to start on paper? Print this blank card and keep it with your book. These are prompts for your own notes, not extra fields in the
+          app.
         </p>
         <button class="print-note-button" type="button">Print the note card</button>
         <article class="print-note-card" aria-labelledby="print-note-title">
@@ -124,24 +160,73 @@
         </article>
       </section>
 
+      <section class="note-composer" aria-labelledby="note-composer-heading" hidden>
+        <h2 id="note-composer-heading">Make a note to paste</h2>
+        <p>Use either prompt, or both. Copy the result into the book’s notes field in BookLog; enter the title and author separately in the app.</p>
+        <label for="note-page">Page or chapter (optional)</label>
+        <input id="note-page" name="page" type="text" maxlength="80" />
+        <label for="note-attention">What caught my attention?</label>
+        <textarea id="note-attention" name="attention" maxlength="2000"></textarea>
+        <label for="note-return">What do I want to return to?</label>
+        <textarea id="note-return" name="return" maxlength="2000"></textarea>
+        <label for="note-preview">Your note</label>
+        <textarea class="note-preview" id="note-preview" name="preview" readonly></textarea>
+        <button type="button" data-copy disabled>Copy note</button>
+        <button type="button" data-clear>Clear</button>
+        <p>This page does not send or save your text. Copying puts the note on your clipboard. It does not add the note to BookLog automatically.</p>
+        <p aria-live="polite">Add a thought to make a note.</p>
+      </section>
+
       <h2>3. Open the book when you want to return</h2>
-      <p>After saving, the book appears on your bookshelf. Select its row to open its detail view and read the note with the title and author together. Before your next reading session, open the book and reread the note to recover the question or detail you wanted to remember.</p>
-      <p>Try three quick rereading questions: What did I notice? What am I still wondering? What should I pay attention to next? There is no target number of notes. The useful test is whether the note helps you pick the book back up with more context than you had before.</p>
+      <p>
+        After saving, the book appears on your bookshelf. Select its row to open its detail view and read the note with the title and author together.
+        Before your next reading session, open the book and reread the note to recover the question or detail you wanted to remember.
+      </p>
+      <p>
+        Try three quick rereading questions: What did I notice? What am I still wondering? What should I pay attention to next? There is no target
+        number of notes. The useful test is whether the note helps you pick the book back up with more context than you had before.
+      </p>
 
       <h2>4. Organize your shelf</h2>
-      <p>Open <strong>Settings</strong>, choose <strong>Filter</strong>, and select <strong>Show all</strong>, <strong>To read</strong>, <strong>Reading</strong> or <strong>Finished</strong>. The status comes from the book’s dates: no start date means <strong>To read</strong>; a start date without a finish date means <strong>Reading</strong>; both dates mean <strong>Finished</strong>.</p>
-      <p>Under <strong>Order by</strong>, choose <strong>Title</strong>, <strong>Author</strong>, <strong>Rating</strong>, <strong>Pages</strong> or <strong>Start Date</strong>. <strong>Title</strong> and <strong>Author</strong> are ascending; <strong>Rating</strong>, <strong>Pages</strong> and <strong>Start Date</strong> are descending.</p>
-      <p><strong>Pages</strong> is the book’s total page count, not a pages-read counter. The date fields in the book editor are labelled <strong>Start date</strong> and <strong>Finish date</strong>.</p>
+      <p>
+        Open <strong>Settings</strong>, choose <strong>Filter</strong>, and select <strong>Show all</strong>, <strong>To read</strong>,
+        <strong>Reading</strong> or <strong>Finished</strong>. The status comes from the book’s dates: no start date means <strong>To read</strong>; a
+        start date without a finish date means <strong>Reading</strong>; both dates mean <strong>Finished</strong>.
+      </p>
+      <p>
+        Under <strong>Order by</strong>, choose <strong>Title</strong>, <strong>Author</strong>, <strong>Rating</strong>, <strong>Pages</strong> or
+        <strong>Start Date</strong>. <strong>Title</strong> and <strong>Author</strong> are ascending; <strong>Rating</strong>,
+        <strong>Pages</strong> and <strong>Start Date</strong> are descending.
+      </p>
+      <p>
+        <strong>Pages</strong> is the book’s total page count, not a pages-read counter. The date fields in the book editor are labelled
+        <strong>Start date</strong> and <strong>Finish date</strong>.
+      </p>
 
       <h2>Keep local copies in mind</h2>
       <p>JSON export and restore require BookLog 4.0.7. These controls are not available in version 4.0.4.</p>
-      <p>For BookLog 4.0.7, book entries, notes, search history, and settings are stored primarily on the device. Clearing BookLog’s app data in Android settings or uninstalling the app removes that local app data. Keep a separate copy of anything you need to preserve.</p>
-      <p>Moving to a new phone? In BookLog 4.0.7, open Settings and use “Export shelf and notes” to save a JSON file, then move that file yourself and choose “Restore shelf and notes” on the other phone. Restore adds entries with IDs not already on the phone and leaves matching entries unchanged; it does not match by title or merge notes. Shelf display settings and offline cover images are not included.</p>
-      <p>The file contains plain-text private notes: keep it private, consider the storage provider you choose, and delete exported files separately when you no longer need them. Automatic Android device transfer remains disabled, and the optional legacy-cloud import is not ongoing sync. See the <a href="booklog-privacy.html">BookLog privacy notice</a> for details and the <a href="booklog-account-deletion.html">account and data deletion page</a> for local versus legacy-cloud deletion.</p>
-
-      
+      <p>
+        For BookLog 4.0.7, book entries, notes, search history, and settings are stored primarily on the device. Clearing BookLog’s app data in
+        Android settings or uninstalling the app removes that local app data. Keep a separate copy of anything you need to preserve.
+      </p>
+      <p>
+        Moving to a new phone? In BookLog 4.0.7, open Settings and use “Export shelf and notes” to save a JSON file, then move that file yourself and
+        choose “Restore shelf and notes” on the other phone. Restore adds entries with IDs not already on the phone and leaves matching entries
+        unchanged; it does not match by title or merge notes. Shelf display settings and offline cover images are not included.
+      </p>
+      <p>
+        The file contains plain-text private notes: keep it private, consider the storage provider you choose, and delete exported files separately
+        when you no longer need them. Automatic Android device transfer remains disabled, and the optional legacy-cloud import is not ongoing sync.
+        See the <a href="booklog-privacy.html">BookLog privacy notice</a> for details and the
+        <a href="booklog-account-deletion.html">account and data deletion page</a> for local versus legacy-cloud deletion.
+      </p>
     </main>
-    <footer class="site-footer"><div class="footer-inner"><p>© <span data-year></span> Lukas Petersson · Sweden</p></div></footer>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© <span data-year></span> Lukas Petersson · Sweden</p>
+      </div>
+    </footer>
     <script src="script.js"></script>
+    <script type="module" src="booklog-note-composer-1.0.0.js"></script>
   </body>
 </html>
