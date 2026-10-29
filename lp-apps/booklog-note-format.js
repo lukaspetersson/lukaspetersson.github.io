@@ -1,0 +1,1 @@
+function formatNote(t,o,e){const n=(t,o)=>String(t||"").slice(0,o).trim(),r=n(t,80),a=n(o,2e3),m=n(e,2e3),u=[];return a&&u.push(`What caught my attention?\n${a}`),m&&u.push(`What do I want to return to?\n${m}`),u.length?`${r?`Page or chapter: ${r}\n\n`:""}${u.join("\n\n")}`:""}globalThis.formatNote=formatNote,"undefined"!=typeof module&&(module.exports={formatNote:formatNote});
