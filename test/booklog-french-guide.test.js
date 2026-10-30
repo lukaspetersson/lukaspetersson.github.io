@@ -17,6 +17,8 @@ const siblings = [
 
 test("French guide preserves reviewed content, English UI labels and data boundaries", () => {
   const html = read(target);
+  const lede = html.match(/<p class="lede">([\s\S]*?)<\/p>/)[1];
+  assert.doesNotMatch(lede.replace(/\s+/g, " "), /Ce guide décrit BookLog 4\.0\.4/);
   for (const phrase of [
     "BookLog 4.0.7",
     "interface actuelle de BookLog est en anglais",

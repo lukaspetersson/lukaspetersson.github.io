@@ -48,7 +48,12 @@ test("French guide contains the exact blank printable note card and shared print
 test("French card insertion preserves every pre-existing guide byte outside the section", () => {
   const section = html.match(/      <section class="printable-note-section"[\s\S]*?<\/article>\n      <\/section>\n/);
   assert.ok(section, "card insertion exists");
-  const withoutCard = removeApprovedGermanLinks(html).replace(section[0], "");
+  const correctedLede =
+    "        <strong>À savoir : l’interface actuelle de BookLog est en anglais, même sur un téléphone configuré en français.</strong>";
+  const previousLede =
+    "        <strong\n          >À savoir : l’interface actuelle de BookLog est en anglais, même sur un téléphone configuré en français. Ce guide décrit BookLog\n          4.0.4.</strong\n        >";
+  assert.ok(html.includes(correctedLede), "English interface disclosure remains without the stale guide version");
+  const withoutCard = removeApprovedGermanLinks(html).replace(section[0], "").replace(correctedLede, previousLede);
   assert.equal(crypto.createHash("sha256").update(withoutCard).digest("hex"), "38284d9d9e8f20f1abc76cab75a50099df14cc19591b328845c1e596ae2dd4cf");
   assert.equal((html.match(/rel="canonical"/g) || []).length, 1);
   assert.equal((removeApprovedGermanLinks(html).match(/hreflang=/g) || []).length, 6);
