@@ -15,7 +15,12 @@ const guides = [
 test("localized guides place one original Play link after disclosure and before instructions", () => {
   for (const [file, label] of guides) {
     const html = fs.readFileSync(path.join(root, file), "utf8");
-    assert.equal((html.match(/https:\/\/play\.google\.com\/store\/apps\/details\?id=com\.lukas\.android\.booklog/g) || []).length, 1, file);
+    const expectedLinks = ["booklog-reading-notes.html", "booklog-diario-de-leitura.html", "booklog-notas-de-lectura.html"].includes(file) ? 2 : 1;
+    assert.equal(
+      (html.match(/https:\/\/play\.google\.com\/store\/apps\/details\?id=com\.lukas\.android\.booklog/g) || []).length,
+      expectedLinks,
+      file
+    );
     const linkAt = html.indexOf("https://play.google.com/store/apps/details?id=com.lukas.android.booklog");
     const introduction = html.match(/<p\b[^>]*class="lede"[^>]*>[\s\S]*?<\/p>/);
     assert.ok(introduction, `${file}: introduction disclosure exists`);
