@@ -66,6 +66,10 @@ The Spanish guide's composer is an isolated, manual-copy aid. It formats only vi
 
 Run `node --test test/booklog-spanish-note-composer.test.js test/booklog-spanish-guide.test.js test/booklog-spanish-print-card.test.js`; the preservation regression pins the pre-insertion Spanish guide baseline and must not read files outside the repository. Validate candidate JS with the deployed Uglifier 4.2.0 harmony parser; avoid optional chaining and bindingless `catch`.
 
+## Portuguese native-guide illustration candidate
+
+The September 2026 BookLog Android note screenshot in `booklog-native-note-screen.png` is a historical illustration only; its English UI and fictitious note must be disclosed in the exact Portuguese alt text and caption. Keep the original PNG byte-for-byte and render it proportionally within the shared 270px screenshot style. Run `node --test test/booklog-native-guide.test.js` from candidate root. This candidate does not establish current app behavior or a v13 runtime capture.
+
 ## Portuguese reading-note composer
 
 Portuguese guide composer is local-candidate only until reviewed. It shares `booklog-note-composer-1.0.0.css` byte-for-byte and must preserve the guide's pre-insertion content, manual copy-only behavior, no storage/network, selectable readonly fallback, CSS readiness gate, and print-only blank card. Run `node --test test/booklog-portuguese-note-composer.test.js test/booklog-portuguese-print-card.test.js` from candidate root.
