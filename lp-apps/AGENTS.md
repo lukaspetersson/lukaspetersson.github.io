@@ -73,3 +73,7 @@ The September 2026 BookLog Android note screenshot in `booklog-native-note-scree
 ## Portuguese reading-note composer
 
 Portuguese guide composer is local-candidate only until reviewed. It shares `booklog-note-composer-1.0.0.css` byte-for-byte and must preserve the guide's pre-insertion content, manual copy-only behavior, no storage/network, selectable readonly fallback, CSS readiness gate, and print-only blank card. Run `node --test test/booklog-portuguese-note-composer.test.js test/booklog-portuguese-print-card.test.js` from candidate root.
+
+## French Falling Kitten guide
+
+The French guide reuses the Spanish guide layout and existing artwork. Keep its reviewed copy verbatim, preserve reciprocal locale alternates and visible language links, and include the French URL exactly once in the sitemap. Run `node --test test/falling-french-guide.test.js test/falling-spanish-guide.test.js test/falling-rotation.test.js test/falling-early-install-cta.test.js test/falling-swedish-native-guide.test.js` from repository root.
