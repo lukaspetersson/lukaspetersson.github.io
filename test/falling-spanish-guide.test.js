@@ -65,3 +65,22 @@ test("English guide uses the unchanged bounded native score screenshot", () => {
   assert.equal(asset.readUInt32BE(16), 1080);
   assert.equal(asset.readUInt32BE(20), 2400);
 });
+
+test("Spanish guide screenshot is the exact bounded native score image", () => {
+  const html = read("falling-kitten-how-to-play-es.html");
+  const figure = `      <figure class="native-game-screenshot">\n        <img\n          src="falling-kitten-android-score-1.png"\n          width="252"\n          height="560"\n          alt="Un gatito azul en el suelo, una puntuación de 1 y tres corazones rojos."\n        />\n        <figcaption>Pantalla del juego para Android con 1 punto y tres corazones.</figcaption>\n      </figure>\n\n`;
+  assert.equal((html.match(/<figure class="native-game-screenshot">/g) || []).length, 1);
+  assert.ok(html.includes(figure));
+  const baseline = html.replace(figure, "");
+  assert.equal(
+    require("node:crypto").createHash("sha256").update(baseline).digest("hex"),
+    "84b6f68cbf929d0b0ed2799374b021fc207c7f5e89928ebe01acae0b82f8a968"
+  );
+  const asset = fs.readFileSync(path.join(site, "falling-kitten-android-score-1.png"));
+  assert.equal(
+    require("node:crypto").createHash("sha256").update(asset).digest("hex"),
+    "551001bcd3a81fffa17b5c22029fede3a3d4d2f299302f497adf64b1ce28b793"
+  );
+  assert.equal(asset.readUInt32BE(16), 1080);
+  assert.equal(asset.readUInt32BE(20), 2400);
+});
