@@ -71,7 +71,10 @@ test("Spanish guide screenshot is the exact bounded native score image", () => {
   const figure = `      <figure class="native-game-screenshot">\n        <img\n          src="falling-kitten-android-score-1.png"\n          width="252"\n          height="560"\n          alt="Un gatito azul en el suelo, una puntuación de 1 y tres corazones rojos."\n        />\n        <figcaption>Pantalla del juego para Android con 1 punto y tres corazones.</figcaption>\n      </figure>\n\n`;
   assert.equal((html.match(/<figure class="native-game-screenshot">/g) || []).length, 1);
   assert.ok(html.includes(figure));
-  const baseline = html.replace(figure, "");
+  const baseline = html
+    .replace(figure, "")
+    .replace('    <link rel="alternate" hreflang="fr-FR" href="https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-fr.html" />\n', "")
+    .replace('        <a href="falling-kitten-how-to-play-fr.html" lang="fr">Français</a>\n', "");
   assert.equal(
     require("node:crypto").createHash("sha256").update(baseline).digest("hex"),
     "84b6f68cbf929d0b0ed2799374b021fc207c7f5e89928ebe01acae0b82f8a968"

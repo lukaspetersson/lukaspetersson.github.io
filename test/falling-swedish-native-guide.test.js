@@ -8,7 +8,15 @@ test("Swedish guide inserts only the bounded native screenshot", () => {
   const html = fs.readFileSync(path.join(__dirname, "../lp-apps/falling-kitten-how-to-play-sv.html"), "utf8");
   assert.equal(html.split(figure).length - 1, 1);
   assert.equal(
-    crypto.createHash("sha256").update(html.replace(figure, "")).digest("hex"),
+    crypto
+      .createHash("sha256")
+      .update(
+        html
+          .replace(figure, "")
+          .replace('    <link rel="alternate" hreflang="fr-FR" href="https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-fr.html" />\n', "")
+          .replace('        <a href="falling-kitten-how-to-play-fr.html" lang="fr">Français</a>\n', "")
+      )
+      .digest("hex"),
     "c99a14955198a40b8ed3ce19bb3e182ea45d10a2543a88af2613fb8708ced959"
   );
   assert.equal(

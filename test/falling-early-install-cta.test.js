@@ -47,6 +47,9 @@ test("each localized guide adds one matching Play link after its lede without ot
       assert.equal(html.split(figure).length - 1, 1, `${file}: exact screenshot figure appears once`);
       stripped = stripped.replace(figure, "");
     }
+    stripped = stripped
+      .replace('    <link rel="alternate" hreflang="fr-FR" href="https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-fr.html" />\n', "")
+      .replace('        <a href="falling-kitten-how-to-play-fr.html" lang="fr">Français</a>\n', "");
     assert.equal(crypto.createHash("sha256").update(stripped).digest("hex"), hash, `${file}: all preexisting bytes preserved`);
     assert.ok(html.indexOf(inserted) > html.indexOf('<p class="lede">'), `${file}: CTA follows lede`);
     assert.ok(html.indexOf(inserted) < html.indexOf("<h2"), `${file}: CTA precedes first section`);
