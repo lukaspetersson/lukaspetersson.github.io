@@ -533,17 +533,20 @@ hr {
   }
 }
 
-.native-game-screenshot {
+.native-game-screenshot,
+.native-book-screen {
   max-width: 270px;
   margin: 1.5rem 0 2rem;
 }
-.native-game-screenshot img {
+.native-game-screenshot img,
+.native-book-screen img {
   display: block;
   width: 100%;
   max-width: 100%;
   height: auto;
 }
-.native-game-screenshot figcaption {
+.native-game-screenshot figcaption,
+.native-book-screen figcaption {
   margin-top: 0.5rem;
   color: var(--muted);
   font-size: 0.9rem;

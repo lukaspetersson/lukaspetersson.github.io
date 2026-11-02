@@ -59,8 +59,11 @@ test("card insertion preserves normalized Portuguese content outside the card an
   const section = html.match(/      <section class="printable-note-section"[\s\S]*?<\/article>\n      <\/section>\n/);
   assert.ok(section, "card insertion is present");
   const baselineLede = '<p class="lede">Um diário de leitura pessoal para organizar livros e guardar os detalhes que você quer lembrar.</p>';
+  const nativeFigure = `      <figure class="native-book-screen">\n        <img\n          src="booklog-native-note-screen.png"\n          width="252"\n          height="560"\n          alt="Tela do BookLog para Android com o livro fictício The Lantern Room e uma nota de exemplo em inglês."\n        />\n        <figcaption>\n          Tela de notas do BookLog para Android, capturada em setembro de 2026 com um livro e uma nota fictícios. A interface é em inglês.\n        </figcaption>\n      </figure>\n`;
+  assert.equal(html.split(nativeFigure).length - 1, 1, "only the reviewed native illustration is excluded from the page comparison");
   const withoutCard = normalize(
     removeApprovedGermanLinks(withoutComposer(html))
+      .replace(nativeFigure, "")
       .replace(section[0], "")
       .replace(/<p class="lede">[\s\S]*?<\/p>/, baselineLede)
   );

@@ -24,7 +24,11 @@ test("guide insertion preserves every byte of the prior guide outside inserted c
   const baselineBytes = fs.readFileSync(path.join(__dirname, "booklog-portuguese-guide-baseline.html"));
   assert.equal(crypto.createHash("sha256").update(baselineBytes).digest("hex"), "de699255e857fa909728659b526b9726516bba182a0fa6f533c039657b125c85");
   const baseline = baselineBytes.toString("utf8");
-  const actual = removeApprovedGermanLinks(read("booklog-diario-de-leitura.html"))
+  const nativeFigure = `      <figure class="native-book-screen">\n        <img\n          src="booklog-native-note-screen.png"\n          width="252"\n          height="560"\n          alt="Tela do BookLog para Android com o livro fictício The Lantern Room e uma nota de exemplo em inglês."\n        />\n        <figcaption>\n          Tela de notas do BookLog para Android, capturada em setembro de 2026 com um livro e uma nota fictícios. A interface é em inglês.\n        </figcaption>\n      </figure>\n`;
+  const source = read("booklog-diario-de-leitura.html");
+  assert.equal(source.split(nativeFigure).length - 1, 1, "only the reviewed native illustration is excluded from the byte comparison");
+  const actual = removeApprovedGermanLinks(source)
+    .replace(nativeFigure, "")
     .replace('    <link rel="stylesheet" href="booklog-note-composer-1.0.0.css" />\n', "")
     .replace(/      <p class="note-composer-jump" hidden>[\s\S]*?<\/p>\n/, "")
     .replace(/      <section class="note-composer"[\s\S]*?<\/section>\n/, "")
