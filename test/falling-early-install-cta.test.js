@@ -42,6 +42,11 @@ test("each localized guide adds one matching Play link after its lede without ot
       assert.equal(html.split(figure).length - 1, 1, `${file}: exact screenshot figure appears once`);
       stripped = stripped.replace(figure, "");
     }
+    if (file === "falling-kitten-how-to-play-sv.html") {
+      const figure = `      <figure class="native-game-screenshot">\n        <img src="falling-kitten-android-score-1.png" width="252" height="560" alt="En blå kattunge på marken, 1 poäng och tre röda hjärtan." />\n        <figcaption>Skärmbild från Falling Kitten 1.2 för Android med 1 poäng och tre hjärtan. Spelets gränssnitt är på engelska.</figcaption>\n      </figure>\n\n`;
+      assert.equal(html.split(figure).length - 1, 1, `${file}: exact screenshot figure appears once`);
+      stripped = stripped.replace(figure, "");
+    }
     assert.equal(crypto.createHash("sha256").update(stripped).digest("hex"), hash, `${file}: all preexisting bytes preserved`);
     assert.ok(html.indexOf(inserted) > html.indexOf('<p class="lede">'), `${file}: CTA follows lede`);
     assert.ok(html.indexOf(inserted) < html.indexOf("<h2"), `${file}: CTA precedes first section`);
