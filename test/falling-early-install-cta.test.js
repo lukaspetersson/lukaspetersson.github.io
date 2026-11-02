@@ -32,7 +32,11 @@ test("each localized guide adds one matching Play link after its lede without ot
     assert.equal(html.split(label).length - 1, 2, `${file}: both links use the existing label`);
     const insertionIndex = html.indexOf(inserted);
     assert.notEqual(insertionIndex, -1, `${file}: inserted paragraph is present`);
-    const stripped = html.slice(0, insertionIndex) + html.slice(insertionIndex + inserted.length);
+    let stripped = html.slice(0, insertionIndex) + html.slice(insertionIndex + inserted.length);
+    if (file === "falling-kitten-how-to-play.html") {
+      stripped = stripped.replace(/      <figure class="native-game-screenshot">[\s\S]*?<\/figure>\n\n/, "");
+      stripped = stripped.replace("styles.css?v=native-screen-20261031-1849", "styles.css?v=rotation-20261028-2234");
+    }
     assert.equal(crypto.createHash("sha256").update(stripped).digest("hex"), hash, `${file}: all preexisting bytes preserved`);
     assert.ok(html.indexOf(inserted) > html.indexOf('<p class="lede">'), `${file}: CTA follows lede`);
     assert.ok(html.indexOf(inserted) < html.indexOf("<h2"), `${file}: CTA precedes first section`);

@@ -48,3 +48,20 @@ test("Spanish guide is discoverable and locale siblings link reciprocally", () =
   assert.match(read("index-sv.html"), /falling-kitten-how-to-play-es.html/);
   assert.match(read("sitemap.xml"), /<loc>https:\/\/lukaspetersson\.com\/lp-apps\/falling-kitten-how-to-play-es\.html<\/loc>/);
 });
+
+test("English guide uses the unchanged bounded native score screenshot", () => {
+  const html = read("falling-kitten-how-to-play.html");
+  assert.match(
+    html,
+    /<figure class="native-game-screenshot">[\s\S]*?<img\s+src="falling-kitten-android-score-1\.png"\s+width="252"\s+height="560"\s+alt="A blue kitten on the ground, a score of 1, three red hearts, and a pause button\."\s*\/>\s*<figcaption>Android game screen showing 1 point and three hearts\.<\/figcaption>\s*<\/figure>/
+  );
+  assert.equal((html.match(/class="native-game-screenshot"/g) || []).length, 1);
+  const asset = fs.readFileSync(path.join(site, "falling-kitten-android-score-1.png"));
+  assert.equal(asset.length, 236098);
+  assert.equal(
+    require("node:crypto").createHash("sha256").update(asset).digest("hex"),
+    "551001bcd3a81fffa17b5c22029fede3a3d4d2f299302f497adf64b1ce28b793"
+  );
+  assert.equal(asset.readUInt32BE(16), 1080);
+  assert.equal(asset.readUInt32BE(20), 2400);
+});
