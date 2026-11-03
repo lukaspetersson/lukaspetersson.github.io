@@ -66,12 +66,18 @@ test("English guide uses the unchanged bounded native score screenshot", () => {
   assert.equal(asset.readUInt32BE(20), 2400);
 });
 
+const ptAlternate = '    <link rel="alternate" hreflang="pt-BR" href="https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-pt-br.html" />\n';
+const ptAnchor = '        <a href="falling-kitten-how-to-play-pt-br.html" lang="pt-BR">Português (Brasil)</a>\n';
 test("Spanish guide screenshot is the exact bounded native score image", () => {
   const html = read("falling-kitten-how-to-play-es.html");
   const figure = `      <figure class="native-game-screenshot">\n        <img\n          src="falling-kitten-android-score-1.png"\n          width="252"\n          height="560"\n          alt="Un gatito azul en el suelo, una puntuación de 1 y tres corazones rojos."\n        />\n        <figcaption>Pantalla del juego para Android con 1 punto y tres corazones.</figcaption>\n      </figure>\n\n`;
   assert.equal((html.match(/<figure class="native-game-screenshot">/g) || []).length, 1);
   assert.ok(html.includes(figure));
+  assert.equal(html.split(ptAlternate).length - 1, 1, "one Portuguese alternate");
+  assert.equal(html.split(ptAnchor).length - 1, 1, "one visible Portuguese link");
   const baseline = html
+    .replace(ptAlternate, "")
+    .replace(ptAnchor, "")
     .replace(figure, "")
     .replace('    <link rel="alternate" hreflang="fr-FR" href="https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-fr.html" />\n', "")
     .replace('        <a href="falling-kitten-how-to-play-fr.html" lang="fr">Français</a>\n', "");

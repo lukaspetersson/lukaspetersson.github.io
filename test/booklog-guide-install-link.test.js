@@ -40,5 +40,6 @@ test("homepage points readers to English and Portuguese printable-card guides wi
   const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
   assert.match(html, /<a href="booklog-reading-notes\.html">Reading notes guide and printable card<\/a>/);
   assert.match(html, /<a href="booklog-diario-de-leitura\.html" lang="pt-BR">Diário de leitura e cartão para imprimir<\/a>/);
-  assert.equal((html.match(/<a\b/g) || []).length, 26);
+  assert.match(html, /<a href="falling-kitten-how-to-play-pt-br\.html" lang="pt-BR">Como jogar \(português\)<\/a>/);
+  assert.equal((html.match(/<a\b/g) || []).length, 27);
 });

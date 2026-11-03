@@ -48,6 +48,8 @@ test("each localized guide adds one matching Play link after its lede without ot
       stripped = stripped.replace(figure, "");
     }
     stripped = stripped
+      .replace('    <link rel="alternate" hreflang="pt-BR" href="https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-pt-br.html" />\n', "")
+      .replace('        <a href="falling-kitten-how-to-play-pt-br.html" lang="pt-BR">Português (Brasil)</a>\n', "")
       .replace('    <link rel="alternate" hreflang="fr-FR" href="https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-fr.html" />\n', "")
       .replace('        <a href="falling-kitten-how-to-play-fr.html" lang="fr">Français</a>\n', "");
     assert.equal(crypto.createHash("sha256").update(stripped).digest("hex"), hash, `${file}: all preexisting bytes preserved`);

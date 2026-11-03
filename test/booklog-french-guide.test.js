@@ -85,8 +85,10 @@ test("French and approved German guide URLs are listed once in sitemap", () => {
   assert.equal(locations.filter((location) => location === german).length, 1);
   const fallingFrench = "https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-fr.html";
   assert.equal(locations.filter((location) => location === fallingFrench).length, 1);
-  assert.equal(locations.length, 17);
-  assert.equal(new Set(locations).size, 17);
+  const fallingPortuguese = "https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-pt-br.html";
+  assert.equal(locations.filter((location) => location === fallingPortuguese).length, 1);
+  assert.equal(locations.length, 18);
+  assert.equal(new Set(locations).size, 18);
   assert.match(xml, /<loc>https:\/\/lukaspetersson\.com\/lp-apps\/booklog-lesetagebuch\.html<\/loc>\s*<lastmod>2026-10-29<\/lastmod>/);
 });
 
