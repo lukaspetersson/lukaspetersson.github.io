@@ -38,6 +38,7 @@
     <link rel="alternate" hreflang="de" href="https://lukaspetersson.com/lp-apps/booklog-lesetagebuch.html" />
     <link rel="alternate" hreflang="x-default" href="https://lukaspetersson.com/lp-apps/booklog-reading-notes.html" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="booklog-note-composer-1.0.0.css" />
   </head>
   <body>
     <header class="site-header">
@@ -77,6 +78,7 @@
         Vous cherchez d’abord un livre ? Consultez l’outil de recherche de livres BookLog <a href="booklog-book-lookup.html">(en anglais)</a>. Il
         s’ouvre dans le navigateur et ne transmet pas ses résultats à l’application.
       </p>
+      <p class="note-composer-jump" hidden>Vous voulez commencer ici ? <a href="#note-composer-heading">Préparez une note à copier</a>.</p>
       <h2>Ajouter un premier livre et une première note</h2>
       <p>
         Dans votre bibliothèque, appuyez sur le bouton <strong>+</strong>. L’écran suivant s’intitule <strong>Add a book</strong>. Saisissez un
@@ -203,6 +205,24 @@
         <strong>Pages</strong> correspond au nombre total de pages du livre, et non à un compteur des pages lues. Dans l’éditeur du livre, les champs
         de date s’appellent <strong>Start date</strong> et <strong>Finish date</strong>.
       </p>
+      <section class="note-composer" aria-labelledby="note-composer-heading" hidden>
+        <h2 id="note-composer-heading">Préparez une note à copier</h2>
+        <p>
+          Écrivez vos propres idées ici, puis copiez la note pour la coller manuellement dans BookLog. Cet outil organise uniquement votre texte ; il
+          ne sauvegarde ni n’envoie vos notes.
+        </p>
+        <label for="note-page">Page ou chapitre (facultatif)</label
+        ><input id="note-page" name="page" type="text" maxlength="80" placeholder="Ex. : p. 42 ou chapitre 3" />
+        <label for="note-attention">Qu’est-ce qui a retenu mon attention ?</label
+        ><textarea id="note-attention" name="attention" maxlength="2000"></textarea> <label for="note-return">Sur quoi ai-je envie de revenir ?</label
+        ><textarea id="note-return" name="return" maxlength="2000"></textarea> <label for="note-preview">Note prête à copier</label
+        ><textarea class="note-preview" id="note-preview" name="preview" readonly></textarea>
+        <button type="button" data-copy disabled>Copier la note</button><button type="button" data-clear>Effacer</button>
+        <p>
+          Cet outil ne sauvegarde ni n’envoie votre texte. Copiez la note avant de fermer ou recharger cette page. Le collage dans BookLog est manuel.
+        </p>
+        <p aria-live="polite">Ajoutez une idée pour préparer la note.</p>
+      </section>
       <h2>Garder à l’esprit où sont enregistrées vos données</h2>
       <p>L’exportation et la restauration JSON nécessitent BookLog 4.0.7. Ces commandes ne sont pas disponibles dans la version 4.0.4.</p>
       <p>
@@ -240,5 +260,7 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="booklog-note-format-fr.js"></script>
+    <script src="booklog-note-composer-fr.js"></script>
   </body>
 </html>
