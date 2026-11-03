@@ -6,6 +6,7 @@ const crypto = require("node:crypto");
 
 const root = path.join(__dirname, "..");
 const removeApprovedGermanLinks = require("./booklog-german-delta");
+const removeApprovedFrenchComposerDelta = require("./booklog-french-composer-delta");
 const html = fs.readFileSync(path.join(root, "lp-apps", "booklog-notes-de-lecture.html"), "utf8");
 const css = fs.readFileSync(path.join(root, "lp-apps", "styles.css"), "utf8");
 const script = fs.readFileSync(path.join(root, "lp-apps", "script.js"), "utf8");
@@ -34,15 +35,15 @@ test("French guide contains the exact blank printable note card and shared print
     assert.ok(normalize(html).includes(copy), `missing exact copy: ${copy}`);
   assert.match(html, /<button class="print-note-button" type="button">Imprimer la fiche<\/button>/);
   assert.equal((html.match(/class="printable-note-section"/g) || []).length, 1);
-  assert.doesNotMatch(html, /<input|<textarea|localStorage|sessionStorage/i);
+  const section = html.match(/      <section class="printable-note-section"[\s\S]*?<\/article>\n      <\/section>\n/);
+  assert.ok(section);
+  assert.doesNotMatch(removeApprovedFrenchComposerDelta(html), /<input|<textarea|localStorage|sessionStorage/i);
+  assert.doesNotMatch(section[0], /<a\b|href=|<input|<textarea|<script|data-/i);
   assert.match(css, /body\.printing-note-card \.print-note-card \{\s*page: booklog-note-card;\s*display: block/);
   assert.match(css, /@page booklog-note-card \{\s*size: auto;\s*margin: 0?\.4in;/);
   assert.doesNotMatch(css, /@page \{/);
   assert.match(script, /afterprint/);
   assert.match(html, /☐ Retenir &nbsp; ☐ Questionner &nbsp; ☐ Relier &nbsp; ☐ Décider/);
-  const section = html.match(/      <section class="printable-note-section"[\s\S]*?<\/article>\n      <\/section>\n/);
-  assert.ok(section);
-  assert.doesNotMatch(section[0], /<a\b|href=|<input|<textarea|<script|data-/i);
 });
 
 test("French card insertion preserves every pre-existing guide byte outside the section", () => {
@@ -66,8 +67,13 @@ test("French card insertion preserves every pre-existing guide byte outside the 
       </figure>
 `;
   assert.equal(html.split(approvedNativeFigure).length - 1, 1, "approved native figure occurs exactly once");
-  const withoutCard = removeApprovedGermanLinks(html).replace(approvedNativeFigure, "").replace(section[0], "").replace(correctedLede, previousLede);
-  assert.equal(crypto.createHash("sha256").update(withoutCard).digest("hex"), "38284d9d9e8f20f1abc76cab75a50099df14cc19591b328845c1e596ae2dd4cf");
+  const withoutCard = removeApprovedFrenchComposerDelta(html);
+  assert.equal(withoutCard.split(section[0]).length - 1, 1, "printable section occurs once before removal");
+  const baselinePage = removeApprovedGermanLinks(withoutCard)
+    .replace(approvedNativeFigure, "")
+    .replace(section[0], "")
+    .replace(correctedLede, previousLede);
+  assert.equal(crypto.createHash("sha256").update(baselinePage).digest("hex"), "38284d9d9e8f20f1abc76cab75a50099df14cc19591b328845c1e596ae2dd4cf");
   assert.equal((html.match(/rel="canonical"/g) || []).length, 1);
   assert.equal((removeApprovedGermanLinks(html).match(/hreflang=/g) || []).length, 6);
 });
