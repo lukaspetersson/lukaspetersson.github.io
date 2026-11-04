@@ -11,6 +11,8 @@ const newAlternate = `    <link rel="alternate" hreflang="fr-FR" href="${frUrl}"
 const newAnchor = `        <a href="falling-kitten-how-to-play-fr.html" lang="fr">Français</a>\n`;
 const ptAlternate = `    <link rel="alternate" hreflang="pt-BR" href="https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-pt-br.html" />\n`;
 const ptAnchor = `        <a href="falling-kitten-how-to-play-pt-br.html" lang="pt-BR">Português (Brasil)</a>\n`;
+const deAlternate = `    <link rel="alternate" hreflang="de-DE" href="https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-de.html" />\n`;
+const deAnchor = `        <a href="falling-kitten-how-to-play-de.html" lang="de">Deutsch</a>\n`;
 
 test("French guide matches parent-reviewed copy, metadata, and source-bounded product behavior", () => {
   const html = read("falling-kitten-how-to-play-fr.html");
@@ -70,9 +72,12 @@ test("French guide preserves the three existing guide pages apart from exact loc
     assert.equal(html.split(ptAlternate).length - 1, 1, `${file}: one reciprocal Portuguese alternate`);
     assert.equal(html.split(ptAnchor).length - 1, 1, `${file}: one visible Portuguese link`);
     const withoutPortuguese = html.replace(ptAlternate, "").replace(ptAnchor, "");
+    assert.equal(withoutPortuguese.split(deAlternate).length - 1, 1, `${file}: one German alternate`);
+    assert.equal(withoutPortuguese.split(deAnchor).length - 1, 1, `${file}: one visible German link`);
+    const withoutGerman = withoutPortuguese.replace(deAlternate, "").replace(deAnchor, "");
     assert.equal(withoutPortuguese.split(newAlternate).length - 1, 1, `${file}: one reciprocal French alternate`);
     assert.equal(html.split(newAnchor).length - 1, 1, `${file}: one visible French link`);
-    const normalized = withoutPortuguese.replace(newAlternate, "").replace(newAnchor, "");
+    const normalized = withoutGerman.replace(newAlternate, "").replace(newAnchor, "");
     assert.equal(hash(normalized), expected, `${file} changed beyond exact French locale insertions`);
   }
 });

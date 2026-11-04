@@ -47,6 +47,20 @@ test("each localized guide adds one matching Play link after its lede without ot
       assert.equal(html.split(figure).length - 1, 1, `${file}: exact screenshot figure appears once`);
       stripped = stripped.replace(figure, "");
     }
+    assert.equal(
+      stripped.split('    <link rel="alternate" hreflang="de-DE" href="https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-de.html" />\n')
+        .length - 1,
+      1,
+      `${file}: one German alternate`
+    );
+    assert.equal(
+      stripped.split('        <a href="falling-kitten-how-to-play-de.html" lang="de">Deutsch</a>\n').length - 1,
+      1,
+      `${file}: one German link`
+    );
+    stripped = stripped
+      .replace('    <link rel="alternate" hreflang="de-DE" href="https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-de.html" />\n', "")
+      .replace('        <a href="falling-kitten-how-to-play-de.html" lang="de">Deutsch</a>\n', "");
     stripped = stripped
       .replace('    <link rel="alternate" hreflang="pt-BR" href="https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-pt-br.html" />\n', "")
       .replace('        <a href="falling-kitten-how-to-play-pt-br.html" lang="pt-BR">Português (Brasil)</a>\n', "")

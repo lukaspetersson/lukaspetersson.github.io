@@ -76,6 +76,8 @@ test("Spanish guide screenshot is the exact bounded native score image", () => {
   assert.equal(html.split(ptAlternate).length - 1, 1, "one Portuguese alternate");
   assert.equal(html.split(ptAnchor).length - 1, 1, "one visible Portuguese link");
   const baseline = html
+    .replace('    <link rel="alternate" hreflang="de-DE" href="https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-de.html" />\n', "")
+    .replace('        <a href="falling-kitten-how-to-play-de.html" lang="de">Deutsch</a>\n', "")
     .replace(ptAlternate, "")
     .replace(ptAnchor, "")
     .replace(figure, "")

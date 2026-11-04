@@ -41,5 +41,5 @@ test("homepage points readers to English and Portuguese printable-card guides wi
   assert.match(html, /<a href="booklog-reading-notes\.html">Reading notes guide and printable card<\/a>/);
   assert.match(html, /<a href="booklog-diario-de-leitura\.html" lang="pt-BR">Diário de leitura e cartão para imprimir<\/a>/);
   assert.match(html, /<a href="falling-kitten-how-to-play-pt-br\.html" lang="pt-BR">Como jogar \(português\)<\/a>/);
-  assert.equal((html.match(/<a\b/g) || []).length, 27);
+  assert.equal((html.match(/<a\b/g) || []).length, 28);
 });

@@ -1,0 +1,45 @@
+{
+  "lang": "de",
+  "path": "falling-kitten-how-to-play-de.html",
+  "title": "Falling Kitten: Spielanleitung für Android — LP Apps",
+  "description": "So funktioniert Falling Kitten 1.2 auf Android: Tippe fallende Kätzchen, damit sie sich um 90 Grad drehen. Punkte gibt es für die Landung auf den Pfoten.",
+  "h1": "So spielst du Falling Kitten",
+  "lede": "Drehe fallende Kätzchen so, dass sie auf den Pfoten landen. Hier erfährst du, wie Tippen, Punkte und Herzen in Falling Kitten 1.2 für Android funktionieren.",
+  "cta": "Falling Kitten bei Google Play ansehen",
+  "first_round_heading": "So läuft eine Runde",
+  "steps": [
+    "Zu Beginn hast du drei Herzen.",
+    "Tippe auf ein fallendes Kätzchen. Jeder Tipp dreht es um eine Vierteldrehung, also 90 Grad.",
+    "Landet es auf den Pfoten, bekommst du einen Punkt. Landet es anders, verlierst du ein Herz.",
+    "Sind alle drei Herzen verloren, endet die Runde. Dein lokaler Bestwert wird auf dem Gerät gespeichert."
+  ],
+  "interface_warning": "Die App-Oberfläche ist auf Englisch, auch wenn dein Android-Gerät auf Deutsch eingestellt ist. Falling Kitten funktioniert offline und benötigt kein Konto.",
+  "screenshot": {
+    "alt": "Ein blaues Kätzchen am Boden, ein Punkt und drei rote Herzen.",
+    "caption": "Falling Kitten 1.2 für Android: ein Punkt und drei rote Herzen. Die Spieloberfläche ist auf Englisch."
+  },
+  "navigation": {
+    "language_label": "Sprache",
+    "locale_label": "Deutsch",
+    "english_label": "English",
+    "swedish_label": "Svenska",
+    "spanish_label": "Español",
+    "french_label": "Français",
+    "portuguese_label": "Português (Brasil)"
+  },
+  "links": {
+    "primary_navigation_label": "Hauptnavigation",
+    "privacy_label": "Datenschutz (Englisch)",
+    "support_label": "Support (Englisch)",
+    "cta_label": "Falling Kitten bei Google Play ansehen"
+  },
+  "integration_plan": [
+    "Die bestehende Guide-Struktur, Styles, Bilddatei und übrigen Assets unverändert übernehmen; nur Textwerte austauschen und die deutsche Sprachwahl ergänzen.",
+    "Die englische Oberfläche und die Spielversion Falling Kitten 1.2 sichtbar benennen; 1.2 ist keine Android-Version.",
+    "Keine Aussage zu Pause, Neustart oder Wiederholung ergänzen; vorhandene Screenshotdatei unverändert lassen."
+  ],
+  "editorial_limits": "Keine Behauptung zu Nachfrage, Suchvolumen oder Downloadwirkung. Der Screenshot belegt nur den beschriebenen sichtbaren Moment. Keine Ersthand-Testaussage, Multiplayer-, Haustier- oder Review-Versprechen.",
+  "after_round_heading": "Nach der Runde",
+  "after_round_body": "Die Anzeige zeigt die Punktzahl der Runde und den auf dem Gerät gespeicherten Bestwert.",
+  "social_image_alt": "Spielanleitungen und Support von LP Apps"
+}

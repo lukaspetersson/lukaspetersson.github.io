@@ -49,7 +49,17 @@ test("Portuguese guide copy, metadata, locale symmetry, Play URL and assets are 
     const sibling = read(file);
     assert.equal(sibling.split(ptAlternate).length - 1, 1, `${file} alternate`);
     assert.equal(sibling.split(ptAnchor).length - 1, 1, `${file} visible locale link`);
-    assert.equal(hash(sibling.replace(ptAlternate, "").replace(ptAnchor, "")), baselines[file], `${file}: all original bytes preserved`);
+    assert.equal(
+      hash(
+        sibling
+          .replace(ptAlternate, "")
+          .replace(ptAnchor, "")
+          .replace('    <link rel="alternate" hreflang="de-DE" href="https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-de.html" />\n', "")
+          .replace('        <a href="falling-kitten-how-to-play-de.html" lang="de">Deutsch</a>\n', "")
+      ),
+      baselines[file],
+      `${file}: all original bytes preserved`
+    );
   }
 });
 
@@ -60,6 +70,14 @@ test("index and sitemap retain frozen baselines except for the exact new links",
   const sitemapAddition = "  <url>\n    <loc>https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-pt-br.html</loc>\n  </url>\n";
   const sitemap = read("sitemap.xml");
   assert.equal(sitemap.split(sitemapAddition).length - 1, 1);
-  assert.equal(hash(index.replace(indexAddition, "")), "126a2eb1d239c7c11144fbad6a653972b262d8602cfc33ebf60523e138548a91");
-  assert.equal(hash(sitemap.replace(sitemapAddition, "")), "97cf1a613bdcf5f623ca020612670eb6876031c707dd5148702e1f89604c1ede");
+  const germanSitemapAddition = "  <url>\n    <loc>https://lukaspetersson.com/lp-apps/falling-kitten-how-to-play-de.html</loc>\n  </url>\n";
+  assert.equal(sitemap.split(germanSitemapAddition).length - 1, 1);
+  assert.equal(
+    hash(index.replace(indexAddition, "").replace('<br /><a href="falling-kitten-how-to-play-de.html" lang="de">Spielanleitung (Deutsch)</a>', "")),
+    "126a2eb1d239c7c11144fbad6a653972b262d8602cfc33ebf60523e138548a91"
+  );
+  assert.equal(
+    hash(sitemap.replace(sitemapAddition, "").replace(germanSitemapAddition, "")),
+    "97cf1a613bdcf5f623ca020612670eb6876031c707dd5148702e1f89604c1ede"
+  );
 });
