@@ -91,3 +91,7 @@ The `falling-kitten-how-to-play-pt-br.html` guide uses the French guide layout a
 ## German reading-note composer
 
 The German guide uses the shared manual-copy composer stylesheet and locale-specific `booklog-note-format-de.js` and `booklog-note-composer-de.js`. Keep its Du-form copy consistent with the existing guide. Preserve `test/german-guide-baseline.html` (SHA-256 `45c71f1496535cea2e275a9d09f709faf996204a27dbee9e5bae5b8dfce49f74`); the count-checked German composer reducer must reconstruct those exact old bytes. Keep all legacy guide assertions and shared assets unchanged. Run `node --test test/booklog-german-note-composer.test.js test/booklog-german-guide.test.js`, then the full suite. Verify manual clipboard copying separately from host-mocked rejection and stale-completion checks. This website tool does not save, send or automatically paste visitor text, and it is not native app integration evidence.
+
+## German Falling Kitten guide
+
+The German Falling Kitten guide preserves the established static guide layout and artwork. Keep the English-interface notice adjacent to the introduction, use the Play locale `hl=de&gl=DE`, and do not imply that 1.2 is an Android version or add pause/reset/replay reliability claims. Keep the German alternate and visible navigation reciprocal across all six guides. Verify the self-contained guide tests and frozen-baseline reducers before publication.
