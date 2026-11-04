@@ -37,6 +37,7 @@
     <link rel="alternate" hreflang="de" href="https://lukaspetersson.com/lp-apps/booklog-lesetagebuch.html" />
     <link rel="alternate" hreflang="x-default" href="https://lukaspetersson.com/lp-apps/booklog-reading-notes.html" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="booklog-note-composer-1.0.0.css" />
   </head>
   <body>
     <header class="site-header">
@@ -77,6 +78,7 @@
         Suchst du zuerst ein Buch? Die <a href="booklog-book-lookup.html">englischsprachige BookLog-Buchsuche im Browser</a> kann dir beim
         Nachschlagen helfen. Ergebnisse werden nicht in die App übertragen; einen passenden Eintrag übernimmst du selbst.
       </p>
+      <p class="note-composer-jump" hidden>Möchtest du hier beginnen? <a href="#note-composer-heading">Eine Notiz zum Kopieren vorbereiten</a>.</p>
       <h2>1. Einen Bucheintrag anlegen</h2>
       <p>
         Tippe im Bücherregal auf das Pluszeichen. Trage den Titel und, wenn du ihn kennst, den Autor ein. Öffne den Notizbereich für deinen ersten
@@ -145,6 +147,28 @@
           <footer class="print-note-footer">BookLog · lukaspetersson.com/lp-apps/booklog-lesetagebuch.html</footer>
         </article>
       </section>
+      <section class="note-composer" aria-labelledby="note-composer-heading" hidden>
+        <h2 id="note-composer-heading">Eine Notiz zum Kopieren vorbereiten</h2>
+        <p>
+          Halte hier deine eigenen Gedanken fest und kopiere die Notiz, um sie manuell in BookLog einzufügen. Dieses Hilfsmittel ordnet nur deinen Text; es
+          speichert und versendet deine Notizen nicht.
+        </p>
+        <label for="note-page">Seite oder Kapitel (optional)</label>
+        <input id="note-page" name="page" maxlength="80" placeholder="Zum Beispiel: S. 42 oder Kapitel 3" />
+        <label for="note-attention">Was ist mir aufgefallen?</label>
+        <textarea id="note-attention" name="attention" maxlength="2000"></textarea>
+        <label for="note-return">Worauf möchte ich zurückkommen?</label>
+        <textarea id="note-return" name="return" maxlength="2000"></textarea>
+        <label for="note-preview">Notiz zum Kopieren</label>
+        <textarea id="note-preview" name="preview" readonly></textarea>
+        <button type="button" data-copy disabled>Notiz kopieren</button>
+        <button type="button" data-clear>Felder leeren</button>
+        <p aria-live="polite">Gib einen Gedanken ein, um die Notiz vorzubereiten.</p>
+        <p>
+          Dieses Hilfsmittel speichert und versendet deinen Text nicht. Kopiere die Notiz, bevor du diese Seite schließt oder neu lädst. Das Einfügen in
+          BookLog erfolgt manuell.
+        </p>
+      </section>
       <h2>Notizen aufbewahren und das Gerät wechseln</h2>
       <p>
         Bucheinträge, Notizen, Suchverlauf und Einstellungen liegen in BookLog 4.0.7 hauptsächlich auf dem Gerät. Wenn du die App deinstallierst oder
@@ -177,5 +201,7 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="booklog-note-format-de.js"></script>
+    <script src="booklog-note-composer-de.js"></script>
   </body>
 </html>

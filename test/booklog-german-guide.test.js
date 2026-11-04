@@ -3,6 +3,7 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
 const root = path.join(__dirname, "..");
+const removeApprovedGermanComposerDelta = require("./booklog-german-composer-delta");
 const html = fs.readFileSync(path.join(root, "lp-apps/booklog-lesetagebuch.html"), "utf8");
 test("German guide has approved copy, language metadata, and privacy boundaries", () => {
   const copy = JSON.parse(fs.readFileSync(path.join(root, "test/booklog-german-guide-copy.json"), "utf8"));
@@ -27,7 +28,9 @@ test("German guide has approved copy, language metadata, and privacy boundaries"
   assert.match(html, /booklog-account-deletion\.html/);
   assert.match(html, /booklog-book-lookup\.html/);
   assert.match(html, /utm_campaign%3Dportfolio_2026/);
-  assert.doesNotMatch(html, /note-composer|booklog-note-composer/);
+  assert.doesNotMatch(removeApprovedGermanComposerDelta(html), /note-composer|booklog-note-composer/);
+  assert.match(html, /booklog-note-composer-de\.js/);
+  assert.match(html, /Eine Notiz zum Kopieren vorbereiten/);
 });
 test("five existing reading guides gain reciprocal German links", () => {
   for (const file of [
